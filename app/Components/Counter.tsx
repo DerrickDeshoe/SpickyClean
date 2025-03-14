@@ -2,7 +2,11 @@
 
 import { useEffect, useState } from "react";
 
-const Counter = ({ target }) => {
+interface CounterProps {
+  target: number; // Define the type of the target prop
+}
+
+const Counter: React.FC<CounterProps> = ({ target }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
