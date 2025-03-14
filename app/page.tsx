@@ -123,7 +123,7 @@ export default function Home() {
             Clean Home with Our Professional Cleaning Services
           </h1>
           <p className="lg:w-[70%] text-darkGray text-[15px] lg:text-[18px]">
-            When you choose SpicklyClean, you're choosing reliability,
+            When you choose SpicklyClean, you are choosing reliability,
             professionalism and a commitment to excellence. Let us handle the
             mess, so you can enjoy the freshness!
           </p>
@@ -302,7 +302,7 @@ export default function Home() {
           </div>
 
           <h1 className="font-bold text-3xl text-spickyBlue w-[80%] text-center lg:w-[100%]">
-            Our Client's Feedback
+            Our Client&apos;s Feedback
           </h1>
         </div>
 
