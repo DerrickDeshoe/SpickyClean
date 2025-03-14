@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@font-face {
+  font-family: nunito;
+  src: url(../app/fonts/Nunito-Light.ttf);
+}
+
+@font-face {
+  font-family: nunitoBold;
+  src: url(../app/fonts/Nunito-SemiBold.ttf);
+}
