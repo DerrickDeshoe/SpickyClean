@@ -11,8 +11,8 @@ import Facebook from "../../public/images/Facebook.png";
 
 const Footer = () => {
   return (
-    <div className=" bg-spickyBlue space-y-2">
-      <div className="flex flex-wrap w-[100%] space-y-5 lg:space-y-0 p-5 lg:p-10 text-white">
+    <div className=" bg-spickyBlue space-y-2 lg:px-[6%]">
+      <div className="flex flex-wrap lg:justify-between w-[100%] space-y-5 lg:space-y-0 p-5 lg:p-10 text-white">
         <div className=" lg:w-[24%] flex flex-col space-y-5">
           {/* <Image src={Logo} alt="alt" className="w-[50%] lg:w-[60%]" /> */}
           <p className="font-bold">LOGO</p>
@@ -32,49 +32,32 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className=" lg:w-[24%] flex flex-col space-y-3 lg:pl-[5%]">
-          <h5 className="font-bold">Navigation</h5>
-          <div className="flex flex-col space-y-2">
-            <Link
-              href="/Services"
-              className="flex space-x-2 items-center hover:text-orange "
-            >
-              <p>Services</p>
-            </Link>
-            <Link
-              href="/OurPrice"
-              className="flex space-x-2 items-center hover:text-orange"
-            >
-              <p>Pricing</p>
-            </Link>
-            <Link
-              href="/Contact"
-              className="flex space-x-2 items-center hover:text-orange"
-            >
-              <p>Contact Us</p>
-            </Link>
-          </div>
-        </div>
         <div className=" w-[100%] lg:w-[24%] flex flex-col space-y-3 lg:pl-[1%]">
-          <h5 className="font-bold">Services</h5>
+          <h5 className="font-bold">Office opening times</h5>
           <div className="flex flex-col space-y-2">
             <Link
               href="/OurPrice"
               className="flex space-x-2 items-center hover:text-orange "
             >
-              <p>House Cleaning</p>
+              <p>Monday-Thursday 9am - 8:30 pm</p>
             </Link>
             <Link
               href="/OurPrice"
               className="flex space-x-2 items-center hover:text-orange"
             >
-              <p>Kitchen Cleaning</p>
+              <p>Friday 9am - 5:30 pm</p>
             </Link>
             <Link
               href="/OurPrice"
               className="flex space-x-2 items-center hover:text-orange"
             >
-              <p>Carpet Cleaning</p>
+              <p>Saturday closed</p>
+            </Link>
+            <Link
+              href="/OurPrice"
+              className="flex space-x-2 items-center hover:text-orange"
+            >
+              <p>Sunday 9am-3pm</p>
             </Link>
           </div>
         </div>
@@ -90,13 +73,13 @@ const Footer = () => {
             </div>
             <div className="flex space-x-2 items-center">
               <Image src={Location} alt="image" className="w-[8%]" />
-              <p>Leighton Buzzard</p>
+              <p>Head Office, 17 Lillian Street Bradford</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="border-b border-white w-[100%]"></div>
+      {/* <div className="border-b border-white w-[100%]"></div>
       <div className="flex flex-wrap justify-center space-y-1 lg:justify-between px-5 lg:px-10 w-[100%] text-xs lg:text-[16px]">
         <div className="flex space-x-1">
           <p className="text-white">Copyright 2024</p>
@@ -105,7 +88,7 @@ const Footer = () => {
         <div className="flex space-x-1 pb-2">
           <p className="text-white">TERM OF USE | PRIVACY POLICY</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

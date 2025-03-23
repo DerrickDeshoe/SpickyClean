@@ -12,13 +12,14 @@ const page = () => {
         <LandingComponent
           title="Budget-Friendly Cleaning"
           heading="Clean Spaces, Fair Prices"
-          description="At SpicklyClean, we provide exceptional cleaning services at affordable rates, 
+          description="At Scrubs&Rugs, we provide exceptional cleaning services at affordable rates, 
           ensuring your space remains spotless and refreshed.
           Our flexible pricing options are designed to suit various needs, whether it's routine upkeep, 
           a deep one-time clean, or specialized services. Using eco-friendly products and modern techniques,
           we deliver outstanding results without compromising on quality. Explore our pricing plans 
           and experience top-tier cleanliness within your budget. "
           image={OurPriceImage}
+          buttonText="Get Started"
         />
       </div>
       <div className=" flex flex-col space-y-[3%] lg:space-y-[1%] justify-end items-center mt-[7%] lg:mt-[3%] text-spickyBlue px-[8%] ">

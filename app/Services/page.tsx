@@ -17,73 +17,72 @@ const page = () => {
           heading="Expert Cleaning Services You Can Trust"
           description=" We are dedicated to providing top-notch cleaning services that leave 
           your home or business sparkling clean and refreshed. Our experienced team uses eco-friendly 
-          products and cutting-edge techniques to ensure a deep, thorough clean every time. Whether 
-          you need regular cleaning, one-time deep cleaning, or specialized services,
-           we're here to deliver results you can trust. "
+          products and cutting-edge techniques to ensure a deep, thorough clean every time. 
+          Whether you need regular cleaning, one-time deep cleaning, or specialized services, 
+          we're here to deliver results you can trust. Let us handle the cleaning so you can 
+          focus on what matters most. "
           image={ServiceImage}
+          buttonText="Get Started"
         />
       </div>
       <div className="py-[5%]">
         <ServicesComponent1
-          cleaningType="Office Cleaning"
-          description="We ensure your office remains spotless, organized, and welcoming. 
-          A clean workspace boosts productivity, enhances employee well-being, 
-          and leaves a great impression on clients."
+          cleaningType="Standard Cleaning"
+          description="Maintain a comfortable and organized home with regular dusting, 
+          vacuuming, mopping, and sanitization, keeping your space fresh and welcoming every day."
 
-          surfaceTitle="Office Bathrooms"
-          surfaceDescription="Hygiene is essential,
-           and our bathroom cleaning service guarantees a fresh, germ-free environment. 
-           We thoroughly clean and disinfect all areas, including"
-          surfaceTitle2="Offices"
-          surfaceDescription2="We use eco-friendly products and flexible scheduling to keep your office looking its best!
-          A clean workspace enhances efficiency, boosts morale, and impresses clients."
-          surfaceTitle3="Office Windows"
-          surfaceDescription3="Our professional window cleaning enhances natural light, 
-          improves your view, and boosts your property's appearance.
-          We guarantee a brighter and cleaner space with our expert window cleaning"
+          surfaceTitle="Kitchens"
+          surfaceDescription="Surfaces are wiped down, appliances cleaned, countertops sanitized, 
+          and trash removed, ensuring your kitchen remains tidy, functional, and inviting."
+          surfaceTitle2="Bathrooms"
+          surfaceDescription2="  Regular disinfection of sinks, toilets, mirrors, 
+          and counters keeps your bathroom clean, hygienic, and ready for everyday use."
+          surfaceTitle3="Living Spaces & Bedrooms"
+          surfaceDescription3=" Dusting and vacuuming are performed to maintain a neat, organized atmosphere, 
+          promoting a comfortable and relaxing environment throughout your home."
           image={Cleaning1}
         />
       </div>
       <div className="py-[5%]">
         <ServicesComponent2
           image={Cleaning2}
-          cleaningType="House Cleaning"
+          cleaningType="Deep House Cleaning"
           description="Your home deserves to be a sanctuary, and we make sure it stays clean, organized, and inviting. 
           A clutter-free space promotes peace, reduces stress, and creates a cozy atmosphere."
 
 
-          surfaceTitle="Kitchen"
-          surfaceDescription="Our SpicklyClean kitchen cleaning service guarantees a spotless, hygienic cooking space.
-          We ensure your kitchen is sparkling clean, organized, and ready to use!"
+          surfaceTitle="Kitchens"
+          surfaceDescription="Stovetops, ovens, and cabinets are thoroughly cleaned,
+           grease removed, and surfaces sanitized to create a spotless and food-safe cooking space."
           surfaceTitle2="Bathrooms"
-          surfaceDescription2="SpicklyClean guarantees your bathroom is pristine, sanitized, and revitalizing.
-          Making sure your bathroom is flawless, fresh and sanitary after each clean!"
-          surfaceTitle3="Bedrooms"
-          surfaceDescription3=" We offer meticulous bedroom cleaning to create a peaceful, tidy retreat. Our services include
-          We transform your bedroom into a clean, serene, and restful haven!"
+          surfaceDescription2="Tiles are scrubbed, grout cleaned, and all surfaces disinfected, 
+          leaving your bathroom fresh, hygienic, and free from bacteria."
+          surfaceTitle3="Living Spacs & Bedrooms"
+          surfaceDescription3="  Carpets, upholstery, and furniture are deeply cleaned, dust is removed from vents,
+           and high-touch areas are sanitized to ensure an allergen-free, cozy environment."
         />
       </div>
 
       <div className="py-[5%]">
         <ServicesComponent1
-          cleaningType="Carpet Cleaning"
-          description="When it comes to your carpets, we go the extra mile to ensure they are deep cleaned and refreshed. 
-          Clean carpets enhance your home's look, improve air quality, and maintain a healthier living environment."
+          cleaningType="Specialized Home Cleaning"
+          description="This customized service combines both Standard and Deep Cleaning, adding extra touches like stain removal,
+           allergen reduction, and post-renovation cleanup to meet your specific needs."
 
-          surfaceTitle="Vacuuming"
-          surfaceDescription="At SpicklyClean, we provide thorough vacuuming services to keep your floors clean and dust-free.
-          We leave your space looking fresh and tidy, with clean floors all around!"
-          surfaceTitle2="Soap Soaking"
-          surfaceDescription2="We leave your surfaces deeply cleaned and refreshed, with long-lasting results!
-          Our soap soaking service ensures tough stains and grime are easily lifted, providing deep cleaning for various surfaces."
-          surfaceTitle3="Dry Washing "
-          surfaceDescription3="Dry washing is perfect for delicate fabrics and surfaces that require gentle care.
-          With SpicklyClean dry washing, your fabrics are treated with care, restored to their original state, and smelling fresh!"
+          surfaceTitle="Kitchens"
+          surfaceDescription="We target grease buildup and stains with specialized treatments, 
+          applying additional sanitization for a pristine, food-safe kitchen space."
+          surfaceTitle2="Bathrooms"
+          surfaceDescription2=" Advanced disinfection, odor control, and mold prevention 
+          treatments ensure your bathroom is hygienic, fresh, and free from lingering germs."
+          surfaceTitle3="Living Spaces & Bedrooms"
+          surfaceDescription3="Specialized cleaning for delicate fabrics, plus air purification and deep dust extraction, 
+          to ensure a healthier, more comfortable home."
           image={Cleaning3}
         />
       </div>
 
-      <div className="py-[5%]">
+      {/* <div className="py-[5%]">
         <ServicesComponent2
           image={Cleaning4}
           cleaningType="Kitchen Cleaning"
@@ -100,7 +99,7 @@ const page = () => {
           surfaceDescription3=" We ensure delicate dishware remains intact and clean, using powerful 
           dishwashers to kill bacteria and germs. Guaranting spotless dishes ready for use in no time!"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

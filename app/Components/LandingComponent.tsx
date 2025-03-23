@@ -7,6 +7,7 @@ interface LandingComponent {
   heading: string;
   description: string;
   image: StaticImageData;
+  buttonText: string;
 }
 
 const LandingComponent = (props: LandingComponent) => {
@@ -28,7 +29,7 @@ const LandingComponent = (props: LandingComponent) => {
 
           <Link href="#" className="pt-3">
             <button className="py-2 lg:py-3 rounded-3xl px-4 lg:px-6 font-semibold text-xs lg:text-sm border bg-spickyBlue text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95">
-              Get Started
+              {props.buttonText}
             </button>
           </Link>
         </div>

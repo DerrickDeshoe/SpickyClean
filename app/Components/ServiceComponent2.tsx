@@ -1,4 +1,6 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import Arrow from "../../public/images/arrow.png";
@@ -16,6 +18,22 @@ interface ServicesComponent1 {
 }
 
 const ServicesComponent1 = (props: ServicesComponent1) => {
+  const [selectedService, setSelectedService] = useState<string>("");
+
+  // Dropdown options (these can be dynamically passed as props or updated)
+  const customServices = [
+    "Window Cleaning",
+    "Carpet Shampooing",
+    "Oven Cleaning",
+    "Fridge Cleaning",
+    "Post-Renovation Cleaning",
+    "Other (Please specify)"
+  ];
+
+  const handleDropdownChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedService(e.target.value);
+  };
+
   return (
     <div className="flex flex-wrap-reverse px-[8%] lg:justify-between gap-y-5 lg:gap-y-0">
       <div className="lg:w-[37%]">
@@ -62,6 +80,34 @@ const ServicesComponent1 = (props: ServicesComponent1) => {
           <p className="text-darkGray text-[14px]">
             {props.surfaceDescription3}
           </p>
+        </div>
+
+        {/* Dropdown for Custom Cleaning Service */}
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="customService" className="text-spickyBlue font-semibold">
+            Choose a Custom Cleaning Service:
+          </label>
+          <select
+            id="customService"
+            value={selectedService}
+            onChange={handleDropdownChange}
+            className="py-2 px-4 rounded-3xl border text-darkGray text-[14px] lg:text-[15px] transition-all duration-150 hover:bg-[#f0f0f0] active:bg-[#dcdcdc]"
+          >
+            <option value="">Select a service</option>
+            {customServices.map((service, index) => (
+              <option key={index} value={service}>
+                {service}
+              </option>
+            ))}
+          </select>
+
+          {selectedService === "Other (Please specify)" && (
+            <input
+              type="text"
+              placeholder="Please specify..."
+              className="py-2 px-4 mt-2 rounded-3xl border text-darkGray text-[14px] lg:text-[15px] focus:outline-none"
+            />
+          )}
         </div>
 
         <Link href="#" className="pt-3">

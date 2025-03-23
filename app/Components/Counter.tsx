@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 interface CounterProps {
-  target: number; // Define the type of the target prop
+  target: number; 
 }
 
 const Counter: React.FC<CounterProps> = ({ target }) => {
@@ -11,8 +11,8 @@ const Counter: React.FC<CounterProps> = ({ target }) => {
 
   useEffect(() => {
     let start = 0;
-    const duration = 2000; // 2 seconds
-    const interval = 30; // Update every 30ms
+    const duration = 2000; 
+    const interval = 30; 
     const increment = target / (duration / interval);
 
     const counter = setInterval(() => {

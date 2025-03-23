@@ -11,6 +11,7 @@ const NavBar = () => {
     { label: "Services", href: "/Services" },
     { label: "Pricing", href: "/OurPrice" },
     { label: "Contact Us", href: "/Contact" },
+    { label: "Recruitment", href: "/Recruitment" },
   ];
   const toggleMenu = () => {
     setIsOpen(!isOpen);
