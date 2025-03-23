@@ -21,8 +21,7 @@ import OurTeam from "./Components/OurTeam";
 import Team1 from "../public/images/Team2.png";
 import Testimonials from "./Components/Testimonials";
 import Testimonial1 from "../public/images/testimonial1.png";
-import LandingComponent from "./Components/LandingComponent";
-import ContactImage from "../public/images/ContactImage.png";
+
 
 export default function Home() {
   return (

@@ -6,7 +6,6 @@ import ServicesComponent2 from "../Components/ServiceComponent2";
 import Cleaning1 from "../../public/images/Cleaning1.png";
 import Cleaning2 from "../../public/images/Cleaning2.png";
 import Cleaning3 from "../../public/images/Cleaning3.png";
-import Cleaning4 from "../../public/images/Cleaning4.png";
 
 const page = () => {
   return (
