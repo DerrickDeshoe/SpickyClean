@@ -15,8 +15,8 @@ const Footer = () => {
       <div className="flex flex-wrap lg:justify-between w-[100%] space-y-5 lg:space-y-0 p-5 lg:p-10 text-white">
         <div className=" lg:w-[24%] flex flex-col space-y-5">
           {/* <Image src={Logo} alt="alt" className="w-[50%] lg:w-[60%]" /> */}
-          <p className="font-bold">LOGO</p>
-          <p className=" w-[80%]">
+          <p className="font-bold lg:text-2xl">LOGO</p>
+          <p className=" w-[80%] lg:w-[96%]">
             Follow us for the latest cleaning tips, special offers and sparkling
             transformations!
           </p>
@@ -32,8 +32,8 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className=" w-[100%] lg:w-[24%] flex flex-col space-y-3 lg:pl-[1%]">
-          <h5 className="font-bold">Office opening times</h5>
+        <div className=" w-[100%] lg:w-[24%] flex flex-col space-y-3">
+          <h5 className="font-bold lg:text-2xl">Office opening times</h5>
           <div className="flex flex-col space-y-2">
             <Link
               href="/OurPrice"
@@ -61,9 +61,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className=" lg:w-[24%] flex flex-col space-y-4">
-          <h5 className="font-bold">Contact Us</h5>
-          <p className="w-[80%] lg:w-[90%]">
+        <div className=" lg:w-[25%] flex flex-col space-y-4">
+          <h5 className="font-bold lg:text-2xl">Contact Us</h5>
+          <p className="w-[80%] lg:w-[100%]">
             Our Support and Sales team is available 24 /7 to answer your queries
           </p>
           <div className="flex flex-col space-y-3 w-[80%] lg:w-[100%]">

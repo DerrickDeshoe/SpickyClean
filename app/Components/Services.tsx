@@ -15,7 +15,7 @@ const Services = ({ image, service, description }: ServicesProps) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="flex flex-col items-center gap-y-4 lg:w-[16%] ">
+    <div className="flex flex-col items-center gap-y-4 w-[100%] lg:w-[16%] ">
       <Image src={image} alt="ServiceIcon" className="w-[16%] lg:w-[20%]" />
       <p className="font-bold text-2xl lg:text-[17px] text-spickyBlue">{service}</p>
       
