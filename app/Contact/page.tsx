@@ -14,7 +14,7 @@ import Contact6 from "../../public/images/LinkedIn.svg";
 import Link from "next/link";
 import emailjs from "emailjs-com";
 
-const page = () => {
+const Page = () => {
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -209,4 +209,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
