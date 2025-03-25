@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState } from "react";
 import LandingComponent from "../Components/LandingComponent";
 import ContactImage from "../../public/images/ContactImage.png";
@@ -63,17 +61,7 @@ const page = () => {
         templateParams,
         "4b7_cqTfdIwsXpaXR"    
       )
-      .then(
-        (response) => {
-          setStatusMessage("Message sent successfully!");
-          setStatusType("success");
-          setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });  
-        },
-        (error) => {
-          setStatusMessage("Failed to send message. Please try again.");
-          setStatusType("error");
-        }
-      );
+    
   };
 
   return (
