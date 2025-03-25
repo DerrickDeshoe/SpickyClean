@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import LandingComponent from "../Components/LandingComponent";
 import ContactImage from "../../public/images/ContactImage.png";
