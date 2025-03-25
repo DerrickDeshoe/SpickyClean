@@ -14,21 +14,21 @@ const LandingComponent = (props: LandingComponent) => {
   return (
     <div>
       <div className="w-[100%] flex flex-wrap lg:justify-between px-[8%] pt-[5%] lg:pt-[1%] mb-[2%]">
-        <div className="flex flex-col space-y-[3%] justify-center lg:w-[45%] relative text-spickyBlue transition-colors duration-150 hover:text-[#7F8490] active:text-[#7F8490]">
+        <div className="flex flex-col space-y-[3%] justify-center lg:w-[45%] relative">
           <div className="flex items-center space-x-2 transition-colors duration-300 hover:text-[#7F8490] active:text-[#7F8490]">
             <span className="w-3 h-3 bg-[#F1598F] rounded-full"></span>
-            <p className="font-semibold">{props.title}</p>
+            <p className="font-bold text-lightBlack">{props.title}</p>
           </div>
 
-          <h1 className="font-bold text-[27px] lg:text-[43px] lg:leading-tight lg:tracking-wide transition-colors duration-150 hover:text-[#7F8490] active:text-[#7F8490] w-[90%] lg:w-[100%]">
+          <h1 className="font-bold text-[27px] lg:text-[43px] text-lightBlack font-Urbanist lg:leading-tight lg:tracking-wide transition-colors duration-150 hover:text-black active:text-lightBlack w-[90%] lg:w-[100%]">
             {props.heading}
           </h1>
-          <p className="w-[100%] text-darkGray text-[13px] lg:text-[15px] transition-colors duration-150 hover:text-[#052148] active:text-[#7F8490]">
+          <p className="w-[100%] text-spickyPink font-bold font-Urbanist text-[13px] lg:text-[15px] transition-colors duration-150 hover:text-lightBlack active:text-lightBlack">
             {props.description}
           </p>
 
           <Link href="#" className="pt-3">
-            <button className="py-2 lg:py-3 rounded-3xl px-4 lg:px-6 font-semibold text-xs lg:text-sm border bg-spickyBlue text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95">
+            <button className="py-2 lg:py-3 font-Urbanist rounded-3xl px-4 lg:px-6 text-xs lg:text-sm bg-black text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95">
               {props.buttonText}
             </button>
           </Link>

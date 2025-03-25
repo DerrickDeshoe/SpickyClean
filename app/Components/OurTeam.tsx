@@ -12,7 +12,7 @@ interface OurTeam {
 
 const OurTeam = (props: OurTeam) => {
   return (
-    <div className="pb-5 rounded-lg w-[100%] lg:w-[23%] ">
+    <div className="pb-5 rounded-lg w-[100%] lg:w-[23%] font-Urbanist">
       <Image src={props.image} alt="Team Image" className="w-[100%]"/>
       <div className="flex flex-col bg-white">
         <div className="flex flex-col p-4">
@@ -24,7 +24,7 @@ const OurTeam = (props: OurTeam) => {
 
         <div className="w-full border-t border-darkGray my-2"></div>
 
-        <Link href={props.socialMedia} className="text-darkGray p-4">
+        <Link href={props.socialMedia} className="text-spickyPink p-4">
           +Follow On Twitter
         </Link>
       </div>

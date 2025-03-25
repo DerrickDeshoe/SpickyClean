@@ -9,11 +9,16 @@
 }
 
 @font-face {
-  font-family: nunito;
-  src: url(../app/fonts/Nunito-Light.ttf);
+  font-family: DMSans;
+  src: url(../app/fonts/DMSans-Regular.ttf);
 }
 
 @font-face {
-  font-family: nunitoBold;
-  src: url(../app/fonts/Nunito-SemiBold.ttf);
+  font-family: DMSansBold;
+  src: url(../app/fonts/DMSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: Urbanist;
+  src: url(../app/fonts/Urbanist[wght].ttf);
 }

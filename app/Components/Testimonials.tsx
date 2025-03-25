@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import React from "react";
 import Image from "next/image";
-import Star from '../../public/images/Star.png'
+import Star from '../../public/images/Star.svg'
 
 interface Testimonials {
   image: StaticImageData;
@@ -12,10 +12,10 @@ interface Testimonials {
 
 const Testimonials = (props: Testimonials) => {
   return (
-    <div className="flex flex-col space-y-4 border border-darkGray rounded-lg lg:w-[30%]">
+    <div className="flex flex-col space-y-4 border border-darkGray rounded-lg lg:w-[30%] font-Urbanist">
       <div className="flex flex-col space-y-2 px-6 pt-5">
         <Image src={Star} alt="5 Star" />
-        <p>{props.description}</p>
+        <p className="text-lightBlack">{props.description}</p>
       </div>
       <div className="w-full border-t border-darkGray"></div>
       <div className="flex space-x-2 px-6 py-3">

@@ -26,12 +26,14 @@ export default {
       grayBlue: "#50647F",
       light2: '#D0D8E4',
       blue: '#50657E',
+      lightBlack: '#4D4D4D',
       },
     },
 
     fontFamily:{
-      nunito: 'nunito',
-      nuniBold: 'nunitoBold',
+      DMSans: 'DMSans',
+      DMSansBold: 'DMSansBold',
+      Urbanist: 'Urbanist'
 
     }
   },

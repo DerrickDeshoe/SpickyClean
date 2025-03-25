@@ -1,6 +1,6 @@
 import React from 'react';
 import LandingComponent from '../Components/LandingComponent';
-import ContactImage from '../../public/images/OurPriceImage.png'
+import RecruitImage from '../../public/images/recruitmentImage.svg';
 
 const page = () => {
   return (
@@ -12,7 +12,7 @@ const page = () => {
           description="If you're seeking part-time or full time cleaning with us! 
           We are actively looking for individuals who share our values of hard work 
           and reliability. Visit our recruitment page 4 more information"
-          image={ContactImage}
+          image={RecruitImage}
           buttonText="Apply Online"
         />
       </div>

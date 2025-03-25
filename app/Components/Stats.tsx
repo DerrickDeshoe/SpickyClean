@@ -4,7 +4,7 @@ import Counter from "./Counter";
 
 const Stats = () => {
   return (
-    <div className="flex space-x-[5%] lg:flex-col w-[100%] lg:w-[50%] lg:items-end lg:space-y-5 text-spickyBlue">
+    <div className="flex space-x-[5%] lg:flex-col w-[100%] lg:w-[50%] lg:items-end lg:space-y-5 text-lightBlack font-Urbanist">
       {/* Homes Cleaned */}
       <div className="flex flex-col space-y-1 lg:items-end">
         <div className="flex space-x-1 justify-center">
@@ -13,7 +13,7 @@ const Stats = () => {
           </h3>
           <h3 className="font-bold  text-[24px] lg:text-3xl">+</h3>
         </div>
-        <p className="text-[13px] lg:text-lg lg:text-left text-darkGray">Homes Cleaned</p>
+        <p className="text-[13px] lg:text-lg lg:text-left text-spickyPink">Homes Cleaned</p>
       </div>
 
       {/* Professional Tools */}
@@ -24,7 +24,7 @@ const Stats = () => {
           </h3>
           <h3 className="font-bold text-[24px] lg:text-3xl">+</h3>
         </div>
-        <p className="text-[13px] lg:text-lg lg:text-left text-darkGray">Professional Tools</p>
+        <p className="text-[13px] lg:text-lg lg:text-left text-spickyPink">Professional Tools</p>
       </div>
 
       {/* Satisfied Clients */}
@@ -35,7 +35,7 @@ const Stats = () => {
           </h3>
           <h3 className="font-bold  text-[24px] lg:text-3xl">%</h3>
         </div>
-        <p className="text-[13px] lg:text-lg lg:text-left text-darkGray">Satisfied Clients</p>
+        <p className="text-[13px] lg:text-lg lg:text-left text-spickyPink">Satisfied Clients</p>
       </div>
     </div>
   );

@@ -4,9 +4,9 @@ import Link from "next/link";
 import HomeImage from "../public/images/HeroImage.png";
 import Stats from "./Components/Stats";
 import Ideal from "../app/Components/Ideal";
-import Card1 from "../public/images/icon1.png";
-import Card2 from "../public/images/icon2.png";
-import Card3 from "../public/images/icon3.png";
+import Card1 from "../public/images/icon1.svg";
+import Card2 from "../public/images/icon2.svg";
+import Card3 from "../public/images/icon3.svg";
 import AboutUsImage from "../public/images/AboutImage.png";
 import Services from "./Components/Services";
 import Service1 from "../public/images/service1.png";
@@ -15,13 +15,13 @@ import Service3 from "../public/images/service3.png";
 import Service4 from "../public/images/service4.png";
 import Service5 from "../public/images/service5.png";
 import Service6 from "../public/images/service6.png";
-import WhyUs from "../public/images/whyUsImage.png";
+import WhyUs from "../public/images/WhyUsImage.svg";
 import ArrowPoints from "./Components/ArrowPoints";
 import OurTeam from "./Components/OurTeam";
 import Team1 from "../public/images/Team2.png";
 import Testimonials from "./Components/Testimonials";
 import Testimonial1 from "../public/images/testimonial1.png";
-
+import Star from '../public/images/Star.svg';
 
 export default function Home() {
   return (
@@ -30,16 +30,16 @@ export default function Home() {
 
       <div className=" flex flex-col w-[100%] lg:hidden justify-between pt-[1%] mb-[6%]">
         <div className="w-[100%] flex flex-wrap lg:justify-between px-[8%] pt-[5%] lg:pt-[1%] mb-[2%]">
-          <div className="flex flex-col space-y-[3%] justify-center lg:w-[45%] relative text-spickyBlue transition-colors duration-150 hover:text-[#7F8490] active:text-[#7F8490]">
+          <div className="flex flex-col space-y-[3%] justify-center lg:w-[45%] relative transition-colors duration-150 hover:text-[#7F8490] active:text-[#7F8490]">
             <div className="flex items-center space-x-2 transition-colors duration-300 hover:text-[#7F8490] active:text-[#7F8490]">
               <span className="w-3 h-3 bg-[#F1598F] rounded-full"></span>
-              <p className="font-semibold">SpickyClean</p>
+              <p className="font-bold text-lightBlack">Scrubs&Rugs</p>
             </div>
 
-            <h1 className="font-bold text-[27px] lg:text-[43px] lg:leading-tight lg:tracking-wide transition-colors duration-150 hover:text-[#7F8490] active:text-[#7F8490] w-[90%] lg:w-[100%]">
-              Scrubs&Rugs
+            <h1 className="font-bold font-Urbanist text-[27px] lg:text-[43px] lg:leading-tight lg:tracking-wide transition-colors duration-150 text-black hover:text-[#7F8490] active:text-[#7F8490] w-[90%] lg:w-[100%]">
+              Cleaning Services For All Your Needs
             </h1>
-            <p className="w-[100%] text-darkGray text-[15px] transition-colors duration-150 hover:text-[#052148] active:text-[#7F8490]">
+            <p className="w-[100%] font-Urbanist text-spickyPink text-[15px] transition-colors duration-80 hover:text-lightBlack active:text-spickyPink">
               Looking for a house cleaning service in Leighton Buzzard? Look no
               further! Whether you need an insured regular cleaning or one-off
               deep clean we are ready to assist you.
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
         <Link href="#" className="pt-3 px-[8%] w-[100%]">
-          <button className="py-2 lg:py-3 rounded-3xl px-4 lg:px-6 font-semibold text-xs lg:text-sm border bg-spickyBlue text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95 w-[100%]">
+          <button className="py-2 rounded-3xl font-Urbanist px-4 lg:px-6 bg-black text-white transition-all duration-1550 transform hover:bg-spickyPink hover:scale-105 active:bg-spickyPink active:scale-95 w-[100%]">
             Get Started
           </button>
         </Link>
@@ -65,21 +65,21 @@ export default function Home() {
         <div className=" flex flex-col space-y-[3%] justify-center w-[40%] relative lg:mt-[9%] text-spicklyBlue">
           <div className="relative flex space-x-5">
             <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
-            <p className="relative font-semibold pt-[2px] text-spickyBlue">
+            <p className="relative font-bold pt-[1px] text-[17px] text-lightBlack">
               Scrubs&Rugs
             </p>
           </div>
 
-          <h1 className="font-bold text-[48px] text-spickyBlue">
+          <h1 className="font-bold font-Urbanist text-[48px] text-black transition-colors duration-300 hover:text-lightBlack">
             Cleaning Services For All Your Needs
           </h1>
-          <p className="w-[97%] text-darkGray text-[17px]">
+          <p className="w-[97%] text-spickyPink text-[17px] font-Urbanist font-semibold ">
             Looking for a house cleaning service in Leighton Buzzard? Look no
             further! Whether you need an insured regular cleaning or one-off
             deep clean we are ready to assist you.
           </p>
           <Link href="#" className="pt-3">
-            <button className="py-2 lg:py-3 rounded-3xl px-4 lg:px-6 font-semibold text-xs lg:text-sm border bg-spickyBlue text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95">
+            <button className="py-2 lg:py-3 rounded-3xl font-Urbanist px-4 lg:px-6 text-xs lg:text-sm bg-black text-white transition-all duration-1550 transform hover:bg-spickyPink hover:scale-105 active:bg-spickyPink active:scale-95">
               Get Started
             </button>
           </Link>
@@ -112,24 +112,24 @@ export default function Home() {
       </div>
 
       <div className="flex flex-wrap px-[8%] justify-center space-y-[7%] lg:space-y-[2%]">
-        <div className=" flex flex-col space-y-[5%] lg:space-y-[2%] justify-center w-[100%] relative mt-[6%] lg:mt-[3%] text-spicklyBlue  ">
+        <div className=" flex flex-col space-y-[5%] lg:space-y-[2%] justify-center w-[100%] relative mt-[6%] lg:mt-[3%] ">
           <div className="relative flex space-x-5">
             <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
-            <p className="relative font-semibold pt-[2px] text-spickyBlue">
+            <p className="relative font-bold pt-[1px] text-lightBlack lg:text-[17px]">
               About Us
             </p>
           </div>
 
-          <h1 className="font-bold text-2xl lg:text-[48px] lg:w-[70%] lg:leading-tight text-spickyBlue">
+          <h1 className="font-bold  font-Urbanist text-2xl lg:text-[48px] lg:w-[70%] lg:leading-tight text-black">
             Clean Home with Our Professional Cleaning Services
           </h1>
-          <p className="lg:w-[70%] text-darkGray text-[15px] lg:text-[18px]">
+          <p className="lg:w-[70%] font-Urbanist text-lightBlack text-[15px] lg:text-[17px]">
             At Scrubs&Rugs we&apos;re committed to provide cleanliness that
             meets excellence.We are dedicated to providing top-notch cleaning
             services that leave your home spotless and refreshed. Whether you
             need regular cleaning service, one-off deep cleaning or specialised
-            services, we&apos;re here 2 deliver results you can trust.Let us
-            handle the cleaning so you can focus on what matters most.Experience
+            services, we&apos;re here 2 deliver results you can trust. Let us
+            handle the cleaning so you can focus on what matters most. Experience
             the difference with Srubs&Rugs -your clean healthy space is just a
             call away!
           </p>
@@ -139,23 +139,25 @@ export default function Home() {
 
       <div className="px-[8%] ">
         <div className="flex flex-wrap lg:justify-between lg:items-center space-y-[7%] lg:space-y-[2%] lg:w-[100%]">
-          <div className=" flex flex-col space-y-[5%] lg:space-y-[2%] justify-center lg:w-[60%] relative mt-[6%] lg:mt-[3%] text-spicklyBlue  ">
+          <div className=" flex flex-col space-y-[5%] lg:space-y-[4%] justify-center lg:w-[60%] relative mt-[6%] lg:mt-[3%] text-spicklyBlue  ">
             <div className="relative flex space-x-5">
               <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
-              <p className="relative font-semibold pt-[2px]">Our Services</p>
+              <p className="relative font-bold pt-[1px] text-[17px] text-lightBlack">
+                Our Services
+              </p>
             </div>
 
-            <h1 className="font-bold text-2xl lg:text-[48px] lg:w-[80%] text-spickyBlue">
+            <h1 className="font-bold font-Urbanist text-2xl lg:text-[48px] lg:w-[80%] text-black">
               Services We Provide
             </h1>
-            <p className="lg:w-[90%] text-darkGray text-[15px] lg:text-[18px]">
+            <p className="lg:w-[90%] font-Urbanist text-lightBlack text-[15px] lg:text-[18px]">
               At Scrubs&Rugs, we offer a full range of professional cleaning
               services designed to keep your home and workplace spotless, fresh
               and inviting.
             </p>
           </div>
           <Link href="/Services" className="pt-3 hidden lg:flex">
-            <button className=" py-3 rounded-3xl px-3 lg:px-6 font-semibold text-sm border bg-spickyBlue text-white">
+            <button className="py-2 lg:py-3 rounded-3xl px-4 lg:px-6 text-xs lg:text-sm bg-black font-Urbanist text-white transition-all duration-1550 transform hover:bg-spickyPink hover:scale-105 active:bg-spickyPink active:scale-95">
               All Services
             </button>
           </Link>
@@ -204,7 +206,7 @@ export default function Home() {
              We tackle built-up grime, sanitize key areas, and leave your home sparkling for a refreshed, welcoming atmosphere."
           />
           <Link href="/Services" className="pt-3 flex lg:hidden w-[100%]">
-            <button className=" py-3 rounded-3xl px-3 lg:px-6 font-semibold text-sm border bg-spickyBlue text-white w-[100%]">
+            <button className=" py-2 rounded-3xl px-3 lg:px-6 text-sm border bg-black font-Urbanist text-white w-[100%] transition-all duration-1550 transform hover:bg-spickyPink hover:scale-105 active:bg-spickyPink active:scale-95">
               All Services
             </button>
           </Link>
@@ -213,16 +215,16 @@ export default function Home() {
 
       {/* why us */}
 
-      <div className="flex flex-wrap w-[100%] px-[8%]">
+      <div className="flex flex-wrap w-[100%] px-[8%] font-Urbanist">
         <div className=" lg:hidden flex flex-col space-y-[2%] justify-end relative lg:mt-[3%] text-spicklyBlue  ">
           <div className="relative flex space-x-5">
             <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
-            <p className="relative font-semibold pt-[2px] text-spickyBlue">
+            <p className="relative font-bold pt-[2px] text-lightBlack">
               Why Choose Us
             </p>
           </div>
 
-          <h1 className="font-bold text-3xl lg:w-[110%] text-spickyBlue">
+          <h1 className="font-bold text-3xl lg:w-[110%] text-black">
             Providing Friendly, Reliable Cleaning Services
           </h1>
         </div>
@@ -234,12 +236,12 @@ export default function Home() {
           <div className=" hidden lg:flex flex-col space-y-[2%] justify-end w-[60%] relative] lg:mt-[3%] text-spicklyBlue  ">
             <div className="relative flex space-x-5">
               <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
-              <p className="relative font-semibold pt-[2px] text-spickyBlue">
+              <p className="relative font-bold pt-[2px] text-lightBlack">
                 Why Choose Us
               </p>
             </div>
 
-            <h1 className="font-bold text-3xl lg:w-[110%] text-spickyBlue">
+            <h1 className="font-bold text-3xl lg:w-[110%] text-black">
               Providing Friendly, Reliable Cleaning Services
             </h1>
           </div>
@@ -266,12 +268,12 @@ export default function Home() {
         <div className=" flex flex-col space-y-[1%] justify-end items-center lg:mt-[3%] text-spicklyBlue  ">
           <div className="relative flex space-x-5">
             <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
-            <p className="relative font-semibold pt-[2px] text-spickyBlue">
+            <p className="relative font-bold text-[17px] pt-[1px] text-lightBlack">
               Our Team
             </p>
           </div>
 
-          <h1 className="font-bold text-3xl text-spickyBlue text-center w-[70%] lg:w-[100%]">
+          <h1 className="font-bold text-3xl text-black font-Urbanist text-center w-[70%] lg:w-[100%]">
             Meet Our Cleaning Team
           </h1>
         </div>
@@ -309,12 +311,12 @@ export default function Home() {
         <div className=" flex flex-col space-y-[1%] justify-end items-center lg:mt-[3%] text-spicklyBlue  ">
           <div className="relative flex space-x-5">
             <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
-            <p className="relative font-semibold pt-[2px] text-spickyBlue">
+            <p className="relative font-bold pt-[1px] text-lightBlack text-[17px]">
               Local Reviews
             </p>
           </div>
 
-          <h1 className="font-bold text-3xl text-spickyBlue w-[80%] text-center lg:w-[100%]">
+          <h1 className="font-bold text-3xl text-black font-Urbanist w-[80%] text-center lg:w-[100%]">
             Our Client&apos;s Feedback
           </h1>
         </div>
@@ -339,8 +341,20 @@ export default function Home() {
             occupation="Office Manager"
           />
         </div>
-      </div>
 
+        <div className=" flex flex-col space-y-[1%] justify-end items-center lg:mt-[3%] font-Urbanist">
+          <div className="">
+            <p className="relative font-bold pt-[1px] text-black text-[17px]">
+              Trusted by 50k+ customers
+            </p>
+          </div>
+
+          <div className="flex space-x-4">
+            <Image src={Star} alt='Image'/>
+            <p className="text-lightBlack font-bold text-[16px]">4.4/5</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
