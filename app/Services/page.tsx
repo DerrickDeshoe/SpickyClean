@@ -1,10 +1,10 @@
 import React from "react";
 import LandingComponent from "../Components/LandingComponent";
-import ServiceImage from "../../public/images/ServicesImage.png";
+import ServiceImage from "../../public/images/servicesHeroImage.png";
 import ServicesComponent1 from "../Components/ServicesComponent1";
 import ServicesComponent2 from "../Components/ServiceComponent2";
-import Cleaning2 from "../../public/images/Cleaning2.png";
-import Cleaning3 from "../../public/images/Cleaning3.png";
+import Cleaning2 from "../../public/images/ourServiceImage1.png";
+import Cleaning3 from "../../public/images/ourServiceImage2.png";
 
 const page = () => {
   return (

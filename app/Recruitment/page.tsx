@@ -1,13 +1,13 @@
 import React from "react";
 import RecruitImage from "../../public/images/RecruitHeroImage.png";
 import ArrowPoints2 from "../Components/ArrowPoints2";
-import RecruitImage2 from "../../public/images/recruite.svg";
+import RecruitImage2 from "../../public/images/recruitImage2.png";
 import Image from "next/image";
 import RecruitmentHero from "../Components/RecruitmentHero";
 import Recruitment1 from "../Components/Recruitment1";
 import Recruitment2 from "../Components/Recruitment2";
-import WhyWork1 from "../../public/images/Why1.png";
-import WhyWork2 from "../../public/images/Why1.png";
+import WhyWork1 from "../../public/images/whyWorkImage.png";
+import WhyWork2 from "../../public/images/why2.png";
 
 const page = () => {
   return (
@@ -67,8 +67,8 @@ const page = () => {
           With Scrubs&Rugs, you can enjoy steady work, great support, and the opportunity to build lasting relationships 
           with clients. Join us today and start earning with a job that works for you!"
           call="Join Us Today"
-          link="OurPrice"
           buttonName="Apply Now"
+          link="OurPrice"
           image={WhyWork1}
         />
       </div>

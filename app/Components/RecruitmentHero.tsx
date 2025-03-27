@@ -4,23 +4,36 @@ import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useForm } from "react-hook-form";
 
-interface RecruitmentHero {
+interface RecruitmentHeroProps {
   heading: string;
   description: string;
   image: StaticImageData;
   buttonName: string;
 }
 
-const RecruitmentHero = (props: RecruitmentHero) => {
+interface FormData {
+  name: string;
+  surname: string;
+  email: string;
+  coverLetter: string;
+  phoneNumber: string;
+  dob: string;
+  status: string;
+  address: string;
+  gender: string;
+  cv: FileList;
+}
+
+const RecruitmentHero = ({ heading, description, image, buttonName }: RecruitmentHeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState<number>(1);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm<FormData>();
 
   const nextStep = () => setStep((prev) => Math.min(prev + 1, 3));
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
-  const onSubmit = (data: Record<string, any>) => {
+  const onSubmit = (data: FormData) => {
     console.log("Form Data:", data);
     setIsSubmitted(true);
     setIsModalOpen(false);
@@ -38,22 +51,18 @@ const RecruitmentHero = (props: RecruitmentHero) => {
           <span className="w-3 h-3 bg-[#F1598F] rounded-full"></span>
           <p className="font-semibold">Work With Us</p>
         </div>
-        <h1 className="font-bold text-3xl lg:text-[43px] lg:leading-snug lg:w-[90%]">
-          {props.heading}
-        </h1>
-        <p className="w-[100%] text-darkGray text-[14px] lg:text-[15px]">
-          {props.description}
-        </p>
+        <h1 className="font-bold text-3xl lg:text-[43px] lg:leading-snug lg:w-[90%]">{heading}</h1>
+        <p className="w-[100%] text-darkGray text-[14px] lg:text-[15px]">{description}</p>
         <button
           className="py-2 lg:py-3 lg:w-[30%] rounded-3xl px-4 lg:px-6 font-semibold text-xs lg:text-sm border bg-black hover:bg-spickyPink text-white hover:scale-105 active:scale-95"
           onClick={() => setIsModalOpen(true)}
         >
-          {props.buttonName}
+          {buttonName}
         </button>
       </div>
 
       <div className="lg:w-[45%]">
-        <Image src={props.image} alt="Image" />
+        <Image src={image} alt="Image" />
       </div>
 
       {isSubmitted && (
