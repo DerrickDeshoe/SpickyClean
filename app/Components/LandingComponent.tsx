@@ -23,7 +23,7 @@ const LandingComponent = (props: LandingComponent) => {
           <h1 className="font-bold text-[27px] lg:text-[43px] text-lightBlack font-Urbanist lg:leading-tight lg:tracking-wide transition-colors duration-150 hover:text-black active:text-lightBlack w-[90%] lg:w-[100%]">
             {props.heading}
           </h1>
-          <p className="w-[100%] text-spickyPink font-bold font-Urbanist text-[13px] lg:text-[15px] transition-colors duration-150 hover:text-lightBlack active:text-lightBlack">
+          <p className="w-[100%] text-darkGray font-Urbanist text-[13px] lg:text-[15px] transition-colors duration-150 hover:text-lightBlack active:text-lightBlack">
             {props.description}
           </p>
 

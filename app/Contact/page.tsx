@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import LandingComponent from "../Components/LandingComponent";
@@ -15,7 +15,6 @@ import Link from "next/link";
 import emailjs from "emailjs-com";
 
 const Page = () => {
-
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -24,11 +23,12 @@ const Page = () => {
     message: "",
   });
 
-  const [statusMessage, setStatusMessage] = useState("");  
-  const [statusType, setStatusType] = useState("");        
+  const [statusMessage, setStatusMessage] = useState("");
+  const [statusType, setStatusType] = useState("");
 
- 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -36,18 +36,21 @@ const Page = () => {
     });
   };
 
- 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-   
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.subject || !formData.message) {
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
       setStatusMessage("Please fill in all fields.");
       setStatusType("error");
       return;
     }
 
-   
     const templateParams = {
       firstName: formData.firstName,
       lastName: formData.lastName,
@@ -56,14 +59,12 @@ const Page = () => {
       message: formData.message,
     };
 
-    emailjs
-      .send(
-        "service_7sf28cy",  
-        "template_6dzjvhl",  
-        templateParams,
-        "4b7_cqTfdIwsXpaXR"    
-      )
-    
+    emailjs.send(
+      "service_7sf28cy",
+      "template_6dzjvhl",
+      templateParams,
+      "4b7_cqTfdIwsXpaXR"
+    );
   };
 
   return (
@@ -86,12 +87,17 @@ const Page = () => {
           <div className="flex flex-col space-y-5 bg-white p-5 rounded-lg">
             <div className="relative flex space-x-5">
               <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full z-10"></span>
-              <p className="relative font-semibold pt-[2px] text-spickyBlue">Contact</p>
+              <p className="relative font-semibold pt-[2px] text-spickyBlue">
+                Contact
+              </p>
             </div>
             <h2 className="text-black font-bold tracking-wider lg:text-3xl">
               Enquire about our services
             </h2>
-            <form onSubmit={handleSubmit} className="flex flex-col space-y-[5%]">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col space-y-[5%]"
+            >
               <div className="flex space-x-2">
                 <input
                   type="text"
@@ -141,7 +147,7 @@ const Page = () => {
               <div className="lg:pt-3">
                 <button
                   type="submit"
-                  className="py-2 lg:py-3 rounded-3xl px-4 lg:px-6 font-semibold text-xs lg:text-sm border bg-spickyPink text-white transition-all duration-1550 transform hover:bg-[#000000] hover:scale-105 active:bg-[#000000] active:scale-95"
+                  className="py-2 lg:py-3 rounded-3xl px-4 lg:px-6  text-xs lg:text-sm bg-spickyPink text-white transition-all duration-1550 transform hover:bg-[#000000] hover:scale-105 active:bg-[#000000] active:scale-95"
                 >
                   Send Message
                 </button>
@@ -150,7 +156,13 @@ const Page = () => {
 
             {/* Display status message */}
             {statusMessage && (
-              <div className={`mt-4 p-3 rounded-md ${statusType === "success" ? "bg-spickyPink text-white" : "bg-red-500 text-white"}`}>
+              <div
+                className={`mt-4 p-3 rounded-md ${
+                  statusType === "success"
+                    ? "bg-spickyPink text-white"
+                    : "bg-red-500 text-white"
+                }`}
+              >
                 {statusMessage}
               </div>
             )}
@@ -158,8 +170,11 @@ const Page = () => {
         </div>
 
         <div className="bg-spickyPink p-3 flex flex-col lg:w-[50%] text-white rounded-lg">
-          <Image src={SanitizerImage} alt="image" />
-          <div className="flex flex-col space-y-[5%]">
+          <div className="w-[100%]">
+            <Image src={SanitizerImage} alt="image"/>
+          </div>
+
+          <div className="flex flex-col space-y-[5%] px-[8%] lg:px-0">
             <div className="flex flex-col lg:px-[11%] space-y-[2%]">
               <div className="flex space-x-3">
                 <Image

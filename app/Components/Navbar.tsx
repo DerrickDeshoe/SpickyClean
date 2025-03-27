@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import Link from "next/link";
 import React, { useState } from "react";
@@ -13,13 +13,14 @@ const NavBar = () => {
     { label: "Contact Us", href: "/Contact" },
     { label: "Recruitment", href: "/Recruitment" },
   ];
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className=" h-14 flex items-center justify-between text-black px-7 lg:px-[8%] z-80 font-Urbanist">
-      <div className=" w-[40%] lg:w-[20%] xl:w-[15%]">
+    <nav className="h-14 flex items-center justify-between text-black px-7 lg:px-[8%] z-80 font-Urbanist">
+      <div className="w-[40%] lg:w-[20%] xl:w-[15%]">
         <Link href="./">
           <h1 className="text-green-500 text-3xl font-bold">LOGO</h1>
         </Link>
@@ -66,7 +67,7 @@ const NavBar = () => {
 
       <div className="hidden lg:flex space-x-2">
         <Link href="/Services" className="pt-3">
-          <button className="py-2 lg:py-[10px]  rounded-3xl px-4 lg:px-6 text-xs lg:text-sm bg-black text-white transition-all duration-1550 transform hover:bg-spickyPink hover:scale-105 active:bg-spickyPink active:scale-95">
+          <button className="py-2 lg:py-[10px] rounded-3xl px-4 lg:px-6 text-xs lg:text-sm bg-black text-white transition-all duration-1550 transform hover:bg-spickyPink hover:scale-105 active:bg-spickyPink active:scale-95">
             Get Started
           </button>
         </Link>
@@ -80,19 +81,19 @@ const NavBar = () => {
                 key={link.href}
                 href={link.href}
                 className="text-white hover:text-zinc-500 transition-colors"
-                onClick={toggleMenu}
+                onClick={toggleMenu} // Close the menu when a link is clicked
               >
                 {link.label}
               </Link>
             ))}
-            <Link href="/Contact" onClick={toggleMenu}>
-              <div className="space-x-2">
-                <Link href="#" className="pt-3 px-[8%]">
-                  <button className="py-2 lg:py-3 rounded-3xl px-6 font-semibold text-xs lg:text-sm bg-black text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95">
-                    Get Started
-                  </button>
-                </Link>
-              </div>
+
+            <Link href="/Services">
+              <button
+                onClick={toggleMenu} // Close the menu when the "Get Started" button is clicked
+                className="py-2 rounded-3xl px-6 font-semibold text-xs bg-black text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95"
+              >
+                Get Started
+              </button>
             </Link>
           </div>
         </div>

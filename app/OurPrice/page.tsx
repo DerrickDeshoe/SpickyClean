@@ -1,6 +1,6 @@
 import React from "react";
 import LandingComponent from "../Components/LandingComponent";
-import OurPriceImage from "../../public/images/OurPriceImage.png";
+import OurPriceImage from "../../public/images/PricingImage.svg";
 import Pricing from "../Components/Pricing";
 import Arrow1 from "../../public/images/arrowWhite.png";
 import Arrow2 from "../../public/images/arrow.png";
@@ -22,13 +22,15 @@ const page = () => {
           buttonText="Get Started"
         />
       </div>
-      <div className=" flex flex-col space-y-[3%] lg:space-y-[1%] justify-end items-center mt-[7%] lg:mt-[3%] text-spickyBlue px-[8%] ">
+      <div className=" flex flex-col space-y-[3%] lg:space-y-[1%] justify-end items-center mt-[7%] lg:mt-[3%] text-lightBlack px-[8%] ">
         <div className="relative flex space-x-5">
           <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
           <p className="relative font-semibold pt-[2px]">Pricing Table</p>
         </div>
 
-        <h1 className="font-bold text-3xl text-center">Pricing Plans for Every Budget</h1>
+        <h1 className="font-bold text-3xl text-center text-spickyPink">
+          Pricing Plans for Every Budget
+        </h1>
         <p className="text-darkGray text-[15px] lg:w-[50%] text-center">
           Our pricing is designed to give you the best cleaning services at an
           affordable rate. We offer a range of flexible packages tailored to
@@ -38,59 +40,60 @@ const page = () => {
       <div className="flex flex-wrap lg:justify-between px-[8%] py-[7%] lg:py-[3%] space-y-[8%] lg:space-y-0">
         <Pricing
           image={Arrow1}
-          cleaningCategory="Basic Cleaning"
-          price="$350"
-          description="Perfect for routine upkeep, our Basic Cleaning package keeps your space fresh.
-           We handle dusting, vacuuming, and surface wiping, ensuring a
-            tidy and comfortable environment for everyday living. "
+          cleaningCategory="Regular Domestic Cleaning"
+          price="From 20.50"
+          description="If you want consistent cleaning to keep your home spotless, our regular domestic cleaning service is perfect! Our cleaners visit weekly, bi-weekly, 
+          or monthly to keep your space tidy, handling all the cleaning tasks you need, so you can enjoy a fresh home all the time! "
           service1="02 Bedroom cleaning"
           service2="01 Living room cleaning"
           service3="02 Bathroom cleaning"
           service4="window cleaning"
-          backgroundColor="#50647F"
+          backgroundColor="#000000"
           textColor="white"
           priceColor="white"
           serviceColor="white"
           serviceTextColor="white"
-          textColor2="#052148"
+          textColor2="#F1598F"
+          buttonColor="spickyPink"
         />
         <Pricing
           image={Arrow2}
-          cleaningCategory="Pro Cleaning"
-          price="$650"
-          description="When your space needs a more thorough touch, 
-          our Pro Cleaning package delivers a deeper clean. 
-          We focus on high-traffic areas, disinfect key surfaces, 
-          and remove built-up dirt to create a healthier environment. "
+          cleaningCategory="One Off Cleans"
+          price="£30 fee + £15.50"
+          description="If you don't need a regular cleaning service but still want a spotless home ,
+          this is the perfect option! Our one-off cleaning service lets you book one of our local cleaners 4 2-6 hours in a single day. 
+          They will handle any cleaning tasks you need, whether you're at home or out and about! "
           service1="02 Bedroom cleaning"
           service2="01 Living room cleaning"
           service3="02 Bathroom cleaning"
           service4="window cleaning"
-          backgroundColor="#D0D8E4"
-          textColor="#052148"
-          priceColor="#052148"
-          serviceColor="#052148"
-          serviceTextColor="#052148"
-          textColor2="#052148"
+          backgroundColor="#FAFAFA"
+          textColor="#7F8490"
+          priceColor="#F1598F"
+          serviceColor="#F1598F"
+          serviceTextColor="#F1598F"
+          textColor2="#7F8490"
+          buttonColor="spickyPink"
         />
         <Pricing
           image={Arrow1}
-          cleaningCategory="Deluxe Cleaning"
-          price="$950"
-          description="For the ultimate cleaning experience, our Deluxe Cleaning 
-          package offers a top-to-bottom deep clean. 
-          We leave no corner untouched, tackling grime, stains,
-           and hard-to-reach spots with expert precision."
+          cleaningCategory="Category Coming Soon"
+          price="TBD"
+          description="Exciting news!
+          We're preparing a brand-new service to make your home even more immaculate and fresh. 
+          Stay tuned for our upcoming offering, designed to provide you with an enhanced cleaning experience.
+          Get ready for something special, launching soon!"
           service1="02 Bedroom cleaning"
           service2="01 Living room cleaning"
           service3="02 Bathroom cleaning"
           service4="window cleaning"
-          backgroundColor="#50647F"
-          textColor2="#052148"
+          backgroundColor="#000000"
+          textColor2="#F1598F"
           textColor="white"
           priceColor="white"
           serviceColor="white"
           serviceTextColor="white"
+          buttonColor="spickyPink"
         />
       </div>
     </div>

@@ -38,7 +38,7 @@ export default function Home() {
             <h1 className="font-bold font-Urbanist text-[27px] lg:text-[43px] lg:leading-tight lg:tracking-wide transition-colors duration-150 text-black hover:text-[#7F8490] active:text-[#7F8490] w-[90%] lg:w-[100%]">
               Cleaning Services For All Your Needs
             </h1>
-            <p className="w-[100%] font-Urbanist text-spickyPink text-[15px] transition-colors duration-80 hover:text-lightBlack active:text-spickyPink">
+            <p className="w-[100%] font-Urbanist text-lightBlack text-[15px] transition-colors duration-80 hover:text-darkGray active:text-darkGray">
               Looking for a house cleaning service in Leighton Buzzard? Look no
               further! Whether you need an insured regular cleaning or one-off
               deep clean we are ready to assist you.
@@ -136,8 +136,8 @@ export default function Home() {
         <Image src={AboutUsImage} alt="About Us Image" />
       </div>
 
-      <div className="px-[8%] ">
-        <div className="flex flex-wrap lg:justify-between lg:items-center space-y-[7%] lg:space-y-[2%] lg:w-[100%]">
+      <div className="">
+        <div className="flex flex-wrap py-[5%] lg:justify-between lg:items-center space-y-[7%] lg:space-y-[2%] lg:w-[100%] px-[8%] ">
           <div className=" flex flex-col space-y-[5%] lg:space-y-[4%] justify-center lg:w-[60%] relative mt-[6%] lg:mt-[3%] text-spicklyBlue  ">
             <div className="relative flex space-x-5">
               <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
@@ -161,7 +161,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div className="py-[7%] lg:py-[5%] space-y-8 lg:space-y-0 flex flex-wrap lg:justify-between">
+        <div className="py-[7%] lg:py-[5%] space-y-8 lg:space-y-0 flex flex-wrap lg:justify-between bg-light px-[8%] ">
           <Services
             image={Service1}
             service="Ironing"
@@ -215,7 +215,7 @@ export default function Home() {
       {/* why us */}
 
       <div className="flex flex-wrap w-[100%] px-[8%] font-Urbanist">
-        <div className=" lg:hidden flex flex-col space-y-[2%] justify-end relative lg:mt-[3%] text-spicklyBlue  ">
+        <div className=" lg:hidden py-[5%] flex flex-col space-y-[2%] justify-end relative ">
           <div className="relative flex space-x-5">
             <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
             <p className="relative font-bold pt-[2px] text-lightBlack">
@@ -232,9 +232,9 @@ export default function Home() {
         </div>
 
         <div className="lg:w-[50%] flex flex-col space-y-8 pb-[8%] lg:pb-0">
-          <div className=" hidden lg:flex flex-col space-y-[2%] justify-end w-[60%] relative] lg:mt-[3%] text-spicklyBlue  ">
+          <div className=" hidden lg:flex flex-col space-y-[2%] justify-end w-[60%] relative] lg:mt-[3%]">
             <div className="relative flex space-x-5">
-              <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
+              <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full z-10"></span>
               <p className="relative font-bold pt-[2px] text-lightBlack">
                 Why Choose Us
               </p>
@@ -263,8 +263,8 @@ export default function Home() {
 
       {/*  Our Team*/}
 
-      <div className="px-[8%] py-[5%] bg-light">
-        <div className=" flex flex-col space-y-[1%] justify-end items-center lg:mt-[3%] text-spicklyBlue  ">
+      <div className="px-[8%] py-[5%]  bg-light">
+        <div className=" flex flex-col space-y-[1%] justify-end items-center  text-spicklyBlue  ">
           <div className="relative flex space-x-5">
             <span className="absolute top-2 w-3 h-3 bg-[#F1598F] rounded-full -z-10"></span>
             <p className="relative font-bold text-[17px] pt-[1px] text-lightBlack">

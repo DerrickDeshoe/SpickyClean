@@ -1,6 +1,11 @@
+'use client'
+
 import React from "react";
-import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
+import { loadStripe } from "@stripe/stripe-js";
+
+// Make sure to initialize Stripe with your public key
+const stripePromise = loadStripe("your-public-key-here");
 
 interface PricingProps {
   image: StaticImageData;
@@ -12,17 +17,45 @@ interface PricingProps {
   service3: string;
   service4: string;
   backgroundColor: string;
-  textColor: string; 
-  textColor2: string; 
-  priceColor: string; 
-  serviceColor: string; 
-  serviceTextColor: string; 
+  textColor: string;
+  textColor2: string;
+  priceColor: string;
+  serviceColor: string;
+  serviceTextColor: string;
+  buttonColor: string;
 }
 
 const Pricing: React.FC<PricingProps> = (props) => {
+  // Function to handle the "Get Started" button click
+  const handlePayment = async () => {
+    const stripe = await stripePromise;
+
+    // Create a checkout session or redirect to Stripe Checkout (optional, using frontend only)
+    const checkoutSession = await fetch("/api/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        price: props.price, // Send the price or other info to the backend (you can just send price)
+      }),
+    });
+
+    const session = await checkoutSession.json();
+
+    // Redirect to Stripe Checkout
+    const result = await stripe!.redirectToCheckout({
+      sessionId: session.id,
+    });
+
+    if (result.error) {
+      console.error(result.error.message);
+    }
+  };
+
   return (
     <div
-      className="rounded-lg lg:w-[30%] p-4 transition-all duration-300 hover:shadow-lg"
+      className="rounded-lg lg:w-[30%] p-4 transition-all duration-300 hover:shadow-lg font-Urbanist"
       style={{ backgroundColor: props.backgroundColor }}
     >
       <div className="p-4 flex flex-col space-y-3">
@@ -36,8 +69,13 @@ const Pricing: React.FC<PricingProps> = (props) => {
           </p>
         </div>
         <div className="flex space-x-2 items-center">
-          <p style={{ color: props.priceColor }} className="text-[27px] font-bold">{props.price}</p>
-          <p style={{ color: props.serviceTextColor }}>/service</p>
+          <p
+            style={{ color: props.priceColor }}
+            className="text-[27px] font-bold"
+          >
+            {props.price}
+          </p>
+          <p style={{ color: props.serviceTextColor }}>/hour</p>
         </div>
         <div>
           <p style={{ color: props.textColor }}>{props.description}</p>
@@ -54,11 +92,12 @@ const Pricing: React.FC<PricingProps> = (props) => {
           )
         )}
       </div>
-      <Link href="#" className="pt-3">
-        <button className="py-3 rounded-3xl px-3 lg:px-6 font-semibold text-sm bg-spickyBlue text-white w-[100%]">
-          Get Started
-        </button>
-      </Link>
+      <button
+        className={`bg-${props.buttonColor} py-2 lg:py-3 rounded-3xl px-3 lg:px-6 text-sm w-[100%] font-Urbanist text-white font-semibold`}
+        onClick={handlePayment} // Trigger the payment when clicked
+      >
+        Get Started
+      </button>
     </div>
   );
 };
