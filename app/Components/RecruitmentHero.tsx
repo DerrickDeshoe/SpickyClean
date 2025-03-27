@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 interface RecruitmentHero {
   heading: string;
   description: string;
-  image: StaticImageData
+  image: StaticImageData;
   buttonName: string;
 }
 
@@ -28,7 +28,7 @@ const RecruitmentHero = (props: RecruitmentHero) => {
 
     setTimeout(() => {
       setIsSubmitted(false);
-    }, 5000); // Hide message after 5 seconds
+    }, 5000);
   };
 
   return (
@@ -38,7 +38,6 @@ const RecruitmentHero = (props: RecruitmentHero) => {
           <span className="w-3 h-3 bg-[#F1598F] rounded-full"></span>
           <p className="font-semibold">Work With Us</p>
         </div>
-
         <h1 className="font-bold text-3xl lg:text-[43px] lg:leading-snug lg:w-[90%]">
           {props.heading}
         </h1>
@@ -57,7 +56,6 @@ const RecruitmentHero = (props: RecruitmentHero) => {
         <Image src={props.image} alt="Image" />
       </div>
 
-      {/* Confirmation Message */}
       {isSubmitted && (
         <div className="fixed bottom-5 right-5 bg-spickyPink text-white py-3 px-6 rounded-lg shadow-lg">
           Application Submitted Successfully!
@@ -73,230 +71,45 @@ const RecruitmentHero = (props: RecruitmentHero) => {
             >
               &times;
             </button>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="lg:w-[90%] flex flex-col justify-between"
-            >
-              {/* First Step */}
+            <form onSubmit={handleSubmit(onSubmit)} className="lg:w-[90%] flex flex-col justify-between">
               {step === 1 && (
                 <div>
-                  <h2 className="text-xl font-bold mb-4">
-                    Personal Information
-                  </h2>
-                  <p className="text-sm mb-4">
-                    Please fill out this form with the required information
-                  </p>
-
-                  {/* Step Indicators */}
-                  <div className="flex items-center space-x-2 mb-4">
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 1 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 1 ? "border-[#F1598F]" : ""}`}
-                    >
-                      1
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 2 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 2 ? "border-[#F1598F]" : ""}`}
-                    >
-                      2
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 3 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 3 ? "border-[#F1598F]" : ""}`}
-                    >
-                      3
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                  </div>
-
-                  <input
-                    {...register("name")}
-                    placeholder="First Name"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
-                  <input
-                    {...register("surname")}
-                    placeholder="Surname"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
-                  <input
-                    {...register("email")}
-                    type="email"
-                    placeholder="Email"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
-                  <textarea
-                    {...register("coverLetter")}
-                    placeholder="Cover Letter"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
+                  <h2 className="text-xl font-bold mb-4">Personal Information</h2>
+                  <p className="text-sm mb-4">Please fill out this form with the required information</p>
+                  <input {...register("name")} placeholder="First Name" className="border p-2 w-full mb-2" required />
+                  <input {...register("surname")} placeholder="Surname" className="border p-2 w-full mb-2" required />
+                  <input {...register("email")} type="email" placeholder="Email" className="border p-2 w-full mb-2" required />
+                  <textarea {...register("coverLetter")} placeholder="Cover Letter" className="border p-2 w-full mb-2" required />
                   <div className="flex justify-end">
-                    <button
-                      type="button"
-                      onClick={nextStep}
-                      className="bg-black text-white px-6 py-2 rounded-3xl mt-2 hover:bg-spickyPink"
-                    >
+                    <button type="button" onClick={nextStep} className="bg-black text-white px-6 py-2 rounded-3xl mt-2 hover:bg-spickyPink">
                       Next
                     </button>
                   </div>
                 </div>
               )}
-
-              {/* Second Step */}
               {step === 2 && (
                 <div>
-                  <h2 className="text-xl font-bold mb-4">
-                    Contact Information
-                  </h2>
-                  <p className="text-sm mb-4">
-                    Please provide your contact details
-                  </p>
-
-                  {/* Step Indicators */}
-                  <div className="flex items-center space-x-2 mb-4">
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 1 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 1 ? "border-[#F1598F]" : ""}`}
-                    >
-                      1
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 2 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 2 ? "border-[#F1598F]" : ""}`}
-                    >
-                      2
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 3 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 3 ? "border-[#F1598F]" : ""}`}
-                    >
-                      3
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                  </div>
-
-                  <input
-                    {...register("phoneNumber")}
-                    placeholder="Phone Number"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
-                  <input
-                    {...register("dob")}
-                    type="date"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
-                  <input
-                    {...register("status")}
-                    placeholder="Marital Status"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
-                  <input
-                    {...register("address")}
-                    placeholder="Home Address"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
-                  <input
-                    {...register("gender")}
-                    placeholder="Gender"
-                    className="border p-2 w-full mb-2"
-                    required
-                  />
+                  <h2 className="text-xl font-bold mb-4">Contact Information</h2>
+                  <p className="text-sm mb-4">Please provide your contact details</p>
+                  <input {...register("phoneNumber")} placeholder="Phone Number" className="border p-2 w-full mb-2" required />
+                  <input {...register("dob")} type="date" className="border p-2 w-full mb-2" required />
+                  <input {...register("status")} placeholder="Marital Status" className="border p-2 w-full mb-2" required />
+                  <input {...register("address")} placeholder="Home Address" className="border p-2 w-full mb-2" required />
+                  <input {...register("gender")} placeholder="Gender" className="border p-2 w-full mb-2" required />
                   <div className="flex justify-end items-center">
-                    <button
-                      type="button"
-                      onClick={prevStep}
-                      className=" text-spickyPink px-4 py-2 rounded mt-2"
-                    >
-                      Previous
-                    </button>
-                    <button
-                      type="button"
-                      onClick={nextStep}
-                      className="bg-black text-white px-6 py-2 rounded-3xl mt-2 hover:bg-spickyPink"
-                    >
-                      Next
-                    </button>
+                    <button type="button" onClick={prevStep} className="text-spickyPink px-4 py-2 rounded mt-2">Previous</button>
+                    <button type="button" onClick={nextStep} className="bg-black text-white px-6 py-2 rounded-3xl mt-2 hover:bg-spickyPink">Next</button>
                   </div>
                 </div>
               )}
-
-              {/* Third Step */}
               {step === 3 && (
                 <div>
                   <h2 className="text-xl font-bold mb-4">Upload CV</h2>
                   <p className="text-sm mb-4">Please upload your CV</p>
-
-                  {/* Step Indicators */}
-                  <div className="flex items-center space-x-2 mb-4">
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 1 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 1 ? "border-[#F1598F]" : ""}`}
-                    >
-                      1
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 2 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 2 ? "border-[#F1598F]" : ""}`}
-                    >
-                      2
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                    <div
-                      className={`w-6 h-6 flex justify-center items-center rounded-full ${
-                        step === 3 ? "bg-[#F1598F]" : "bg-white"
-                      } border-2 ${step !== 3 ? "border-[#F1598F]" : ""}`}
-                    >
-                      3
-                    </div>
-                    <div className="flex-1 h-[2px] bg-[#D4D4D8]"></div>
-                  </div>
-
-                  <input
-                    {...register("cv")}
-                    type="file"
-                    className="border p-[25%] w-full mb-2"
-                    required
-                  />
+                  <input {...register("cv")} type="file" className="border p-[25%] w-full mb-2" required />
                   <div className="flex justify-end items-center">
-                    <button
-                      type="button"
-                      onClick={prevStep}
-                      className=" text-spickyPink px-4 py-2 rounded mt-2"
-                    >
-                      Previous
-                    </button>
-                    <button
-                      type="button"
-                      onClick={nextStep}
-                      className="bg-black text-white px-6 py-2 rounded-3xl mt-2 hover:bg-spickyPink"
-                    >
-                      Submit
-                    </button>
+                    <button type="button" onClick={prevStep} className="text-spickyPink px-4 py-2 rounded mt-2">Previous</button>
+                    <button type="submit" className="bg-black text-white px-6 py-2 rounded-3xl mt-2 hover:bg-spickyPink">Submit</button>
                   </div>
                 </div>
               )}
