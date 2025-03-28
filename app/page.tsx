@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import HomeImage from "../public/images/HeroImage.png";
+import HomeImage2 from "../public/images/HeroImageMobile.png";
 import Stats from "./Components/Stats";
 import Ideal from "../app/Components/Ideal";
 import Card1 from "../public/images/icon1.svg";
@@ -48,8 +49,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:w-[55%] lg:mt-[2%] flex justify-center">
+          <div className="lg:w-[55%] lg:mt-[2%] hidden lg:flex justify-center">
             <Image src={HomeImage} alt="Hero Image" className="" />
+          </div>
+          <div className=" lg:mt-[2%] flex lg:hidden justify-center w-[100%]">
+            <Image src={HomeImage2} alt="Hero Image" className="" />
           </div>
         </div>
         <Link href="#" className="pt-3 px-[8%] w-[100%]">

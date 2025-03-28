@@ -7,6 +7,7 @@ interface LandingComponent {
   heading: string;
   description: string;
   image: StaticImageData;
+  image2: StaticImageData
   buttonText: string;
 }
 
@@ -34,8 +35,11 @@ const LandingComponent = (props: LandingComponent) => {
           </Link>
         </div>
 
-        <div className="lg:w-[55%] lg:mt-[2%] flex justify-center">
+        <div className="hidden lg:w-[55%] lg:mt-[2%] lg:flex justify-center">
           <Image src={props.image} alt="Image" />
+        </div>
+        <div className="lg:hidden lg:mt-[2%] flex justify-center">
+          <Image src={props.image2} alt="Image" />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import LandingComponent from "../Components/LandingComponent";
 import ServiceImage from "../../public/images/servicesHeroImage.png";
+import ServiceImage2 from "../../public/images/servicesMobile.png";
 import ServicesComponent1 from "../Components/ServicesComponent1";
 import ServicesComponent2 from "../Components/ServiceComponent2";
 import Cleaning2 from "../../public/images/ourServiceImage1.png";
@@ -20,6 +21,7 @@ const page = () => {
           we're here to deliver results you can trust. Let us handle the cleaning so you can 
           focus on what matters most. "
           image={ServiceImage}
+          image2={ServiceImage2}
           buttonText="Get Started"
         />
       </div>

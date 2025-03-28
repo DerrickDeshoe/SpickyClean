@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import LandingComponent from "../Components/LandingComponent";
 import ContactImage from "../../public/images/ContactImage.png";
+import ContactImage2 from "../../public/images/contactMobile.png";
 import SanitizerImage from "../../public/images/contactImage.svg";
 import Image from "next/image";
 import Contact1 from "../../public/images/Phone.svg";
@@ -78,6 +79,7 @@ const Page = () => {
            Reach us via email or phone for a quick response. 
            Our team is available to assist you with flexible scheduling and personalized solutions."
           image={ContactImage}
+          image2={ContactImage2}
           buttonText="Get Started"
         />
       </div>
@@ -171,7 +173,7 @@ const Page = () => {
 
         <div className="bg-spickyPink p-3 flex flex-col lg:w-[50%] text-white rounded-lg">
           <div className="w-[100%]">
-            <Image src={SanitizerImage} alt="image"/>
+            <Image src={SanitizerImage} alt="image" />
           </div>
 
           <div className="flex flex-col space-y-[5%] px-[8%] lg:px-0">

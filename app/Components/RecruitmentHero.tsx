@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useForm } from "react-hook-form";
 
+
 interface RecruitmentHeroProps {
   heading: string;
   description: string;
   image: StaticImageData;
+  image2: StaticImageData;
   buttonName: string;
 }
 
@@ -24,7 +26,7 @@ interface FormData {
   cv: FileList;
 }
 
-const RecruitmentHero = ({ heading, description, image, buttonName }: RecruitmentHeroProps) => {
+const RecruitmentHero = ({ heading, description, image2, image, buttonName }: RecruitmentHeroProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState<number>(1);
@@ -61,8 +63,12 @@ const RecruitmentHero = ({ heading, description, image, buttonName }: Recruitmen
         </button>
       </div>
 
-      <div className="lg:w-[45%]">
+      <div className="hidden lg:w-[45%]">
         <Image src={image} alt="Image" />
+      </div>
+
+      <div className=" w-[100%] lg:hidden">
+        <Image src={image2} alt="Image" />
       </div>
 
       {isSubmitted && (

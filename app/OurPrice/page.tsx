@@ -1,6 +1,7 @@
 import React from "react";
 import LandingComponent from "../Components/LandingComponent";
 import OurPriceImage from "../../public/images/PricingImage.svg";
+import OurPriceImage2 from "../../public/images/pricingRecruitMobile.png";
 import Pricing from "../Components/Pricing";
 import Arrow1 from "../../public/images/arrowWhite.png";
 import Arrow2 from "../../public/images/arrow.png";
@@ -19,6 +20,7 @@ const page = () => {
           we deliver outstanding results without compromising on quality. Explore our pricing plans 
           and experience top-tier cleanliness within your budget. "
           image={OurPriceImage}
+          image2={OurPriceImage2}
           buttonText="Get Started"
         />
       </div>
@@ -44,10 +46,10 @@ const page = () => {
           price="From 20.50"
           description="If you want consistent cleaning to keep your home spotless, our regular domestic cleaning service is perfect! Our cleaners visit weekly, bi-weekly, 
           or monthly to keep your space tidy, handling all the cleaning tasks you need, so you can enjoy a fresh home all the time! "
-          service1="02 Bedroom cleaning"
-          service2="01 Living room cleaning"
-          service3="02 Bathroom cleaning"
-          service4="window cleaning"
+          service1="vacuuming"
+          service2="polishing"
+          service3="dusting"
+          service4="ironing"
           backgroundColor="#000000"
           textColor="white"
           priceColor="white"
@@ -63,10 +65,10 @@ const page = () => {
           description="If you don't need a regular cleaning service but still want a spotless home ,
           this is the perfect option! Our one-off cleaning service lets you book one of our local cleaners 4 2-6 hours in a single day. 
           They will handle any cleaning tasks you need, whether you're at home or out and about! "
-          service1="02 Bedroom cleaning"
-          service2="01 Living room cleaning"
-          service3="02 Bathroom cleaning"
-          service4="window cleaning"
+          service1="vacuuming"
+          service2="polishing"
+          service3="dusting"
+          service4="ironing"
           backgroundColor="#FAFAFA"
           textColor="#7F8490"
           priceColor="#F1598F"
@@ -83,10 +85,10 @@ const page = () => {
           We're preparing a brand-new service to make your home even more immaculate and fresh. 
           Stay tuned for our upcoming offering, designed to provide you with an enhanced cleaning experience.
           Get ready for something special, launching soon!"
-          service1="02 Bedroom cleaning"
-          service2="01 Living room cleaning"
-          service3="02 Bathroom cleaning"
-          service4="window cleaning"
+          service1="vacuuming"
+          service2="polishing"
+          service3="dusting"
+          service4="ironing"
           backgroundColor="#000000"
           textColor2="#F1598F"
           textColor="white"

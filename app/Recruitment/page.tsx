@@ -1,5 +1,6 @@
 import React from "react";
 import RecruitImage from "../../public/images/RecruitHeroImage.png";
+import RecruitImage3 from "../../public/images/pricingRecruitMobile.png";
 import ArrowPoints2 from "../Components/ArrowPoints2";
 import RecruitImage2 from "../../public/images/recruitImage2.png";
 import Image from "next/image";
@@ -19,6 +20,7 @@ const page = () => {
           looking for individuals who share our values of hard work and reliability. 
           We'd love to have you on board—apply today and become part of our dedicated team!"
           image={RecruitImage}
+          image2={RecruitImage3}
           buttonName="Apply Online"
         />
       </div>
