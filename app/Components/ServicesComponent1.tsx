@@ -13,7 +13,7 @@ interface ServicesComponent1 {
 
 const ServicesComponent1 = (props: ServicesComponent1) => {
   return (
-    <div className="flex flex-wrap px-[8%] lg:justify-between space-y-[7%] lg:space-y-0 font-Urbanist">
+    <div className="flex flex-wrap px-[8%] lg:justify-between space-y-[8%] lg:space-y-0 font-Urbanist">
       <div className="flex flex-col space-y-[3%] justify-center lg:w-[45%] relative text-lightBlack transition-colors duration-150 hover:text-[#7F8490] active:text-[#7F8490]">
         {/* Circle and Text in a row */}
         <div className="flex items-center space-x-2 transition-colors duration-300 hover:text-[#7F8490] active:text-[#7F8490]">

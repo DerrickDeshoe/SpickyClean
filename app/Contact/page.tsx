@@ -80,7 +80,7 @@ const Page = () => {
            Our team is available to assist you with flexible scheduling and personalized solutions."
           image={ContactImage}
           image2={ContactImage2}
-          buttonText="Get Started"
+         
         />
       </div>
 

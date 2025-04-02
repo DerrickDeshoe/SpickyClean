@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import LOGO from '../../public/images/logo.png';
+import Image from "next/image";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +22,9 @@ const NavBar = () => {
 
   return (
     <nav className="h-14 flex items-center justify-between text-black px-7 lg:px-[8%] z-80 font-Urbanist">
-      <div className="w-[40%] lg:w-[20%] xl:w-[15%]">
+      <div className="w-[16%] lg:w-[7%] xl:w-[7%] lg:pt-[2%]">
         <Link href="./">
-          <h1 className="text-green-500 text-3xl font-bold">LOGO</h1>
+          <Image src={LOGO} alt='LOGO Image'/>
         </Link>
       </div>
 
@@ -86,15 +88,6 @@ const NavBar = () => {
                 {link.label}
               </Link>
             ))}
-
-            <Link href="/Services">
-              <button
-                onClick={toggleMenu} // Close the menu when the "Get Started" button is clicked
-                className="py-2 rounded-3xl px-6 font-semibold text-xs bg-black text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95"
-              >
-                Get Started
-              </button>
-            </Link>
           </div>
         </div>
       )}

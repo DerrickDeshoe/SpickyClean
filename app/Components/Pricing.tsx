@@ -4,8 +4,6 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { loadStripe } from "@stripe/stripe-js";
 
-// Make sure to initialize Stripe with your public key
-const stripePromise = loadStripe("your-public-key-here");
 
 interface PricingProps {
   image: StaticImageData;
@@ -26,32 +24,7 @@ interface PricingProps {
 }
 
 const Pricing: React.FC<PricingProps> = (props) => {
-  // Function to handle the "Get Started" button click
-  const handlePayment = async () => {
-    const stripe = await stripePromise;
 
-    // Create a checkout session or redirect to Stripe Checkout (optional, using frontend only)
-    const checkoutSession = await fetch("/api/create-checkout-session", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        price: props.price, // Send the price or other info to the backend (you can just send price)
-      }),
-    });
-
-    const session = await checkoutSession.json();
-
-    // Redirect to Stripe Checkout
-    const result = await stripe!.redirectToCheckout({
-      sessionId: session.id,
-    });
-
-    if (result.error) {
-      console.error(result.error.message);
-    }
-  };
 
   return (
     <div
@@ -94,9 +67,9 @@ const Pricing: React.FC<PricingProps> = (props) => {
       </div>
       <button
         className={`bg-${props.buttonColor} py-2 lg:py-3 rounded-3xl px-3 lg:px-6 text-sm w-[100%] font-Urbanist text-white font-semibold`}
-        onClick={handlePayment} // Trigger the payment when clicked
+       
       >
-        Get Started
+        Get Package
       </button>
     </div>
   );

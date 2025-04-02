@@ -10,7 +10,7 @@ import Cleaning3 from "../../public/images/ourServiceImage2.png";
 const page = () => {
   return (
     <div>
-      <div>
+      <div className="">
         <LandingComponent
           title="What we offer"
           heading="Expert Cleaning Services You Can Trust"
@@ -22,7 +22,6 @@ const page = () => {
           focus on what matters most. "
           image={ServiceImage}
           image2={ServiceImage2}
-          buttonText="Get Started"
         />
       </div>
 

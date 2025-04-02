@@ -13,7 +13,7 @@ interface ServicesComponent1 {
 
 const ServicesComponent1 = (props: ServicesComponent1) => {
   return (
-    <div className="flex flex-wrap-reverse px-[8%] lg:justify-between gap-y-4 lg:gap-y-0 font-Urbanist">
+    <div className="flex flex-wrap-reverse px-[8%] lg:justify-between gap-y-5 lg:gap-y-0 font-Urbanist">
       <div className="lg:w-[37%]">
         <Image src={props.image} alt="Image" />
       </div>

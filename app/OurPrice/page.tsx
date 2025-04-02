@@ -21,7 +21,6 @@ const page = () => {
           and experience top-tier cleanliness within your budget. "
           image={OurPriceImage}
           image2={OurPriceImage2}
-          buttonText="Get Started"
         />
       </div>
       <div className=" flex flex-col space-y-[3%] lg:space-y-[1%] justify-end items-center mt-[7%] lg:mt-[3%] text-lightBlack px-[8%] ">

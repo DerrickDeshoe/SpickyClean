@@ -73,12 +73,12 @@ const Recruitment1: React.FC<RecruitmentProps> = (props) => {
         <Image src={props.image} alt="Image" />
       </div>
 
-      {/* Confirmation Message */}
+      {/* Confirmation Message
       {isSubmitted && (
         <div className="fixed bottom-5 right-5 bg-spickyPink text-white py-3 px-6 rounded-lg shadow-lg">
           Application Submitted Successfully!
         </div>
-      )}
+      )} */}
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">

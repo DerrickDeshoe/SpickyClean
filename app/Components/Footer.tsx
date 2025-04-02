@@ -8,14 +8,14 @@ import Phone from "../../public/images/Phone.svg";
 import Instagram from "../../public/images/Instagram.svg";
 import LinkedIn from "../../public/images/LinkedIn.svg";
 import Facebook from "../../public/images/Facebook.svg";
+import Logo from '../../public/images/logo2.png'
 
 const Footer = () => {
   return (
     <div className=" bg-spickyPink space-y-2 lg:px-[3%]">
       <div className="flex flex-wrap lg:justify-between w-[100%] space-y-5 lg:space-y-0 p-5 lg:p-10 text-white">
         <div className=" lg:w-[24%] flex flex-col space-y-5">
-          {/* <Image src={Logo} alt="alt" className="w-[50%] lg:w-[60%]" /> */}
-          <p className="font-bold lg:text-2xl">LOGO</p>
+          <Image src={Logo} alt="alt" className="w-[20%] lg:w-[30%]" />
           <p className=" w-[90%] lg:w-[96%] font-DMSans">
             Follow us for the latest cleaning tips, special offers and sparkling
             transformations!

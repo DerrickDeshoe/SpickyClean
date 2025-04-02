@@ -49,14 +49,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:w-[55%] lg:mt-[2%] hidden lg:flex justify-center">
+          <div className="mt-[2%] hidden lg:flex justify-center">
             <Image src={HomeImage} alt="Hero Image" className="" />
           </div>
-          <div className=" lg:mt-[2%] flex lg:hidden justify-center w-[100%]">
-            <Image src={HomeImage2} alt="Hero Image" className="" />
+          <div className="mt-[2%] flex lg:hidden justify-center w-[100%]">
+            <Image src={HomeImage2} alt="Hero Image" className="w-[150%]" />
           </div>
         </div>
-        <Link href="#" className="pt-3 px-[8%] w-[100%]">
+        <Link href="/Services" className="pt-3 px-[8%] w-[100%]">
           <button className="py-2 rounded-3xl font-Urbanist px-4 lg:px-6 bg-black text-white transition-all duration-1550 transform hover:bg-spickyPink hover:scale-105 active:bg-spickyPink active:scale-95 w-[100%]">
             Get Started
           </button>
@@ -76,7 +76,7 @@ export default function Home() {
           <h1 className="font-bold font-Urbanist text-[48px] text-black transition-colors duration-300 hover:text-lightBlack">
             Cleaning Services For All Your Needs
           </h1>
-          <p className="w-[97%] text-spickyPink text-[17px] font-Urbanist font-semibold ">
+          <p className="w-[97%] text-lightBlack text-[17px] font-Urbanist ">
             Looking for a house cleaning service in Leighton Buzzard? Look no
             further! Whether you need an insured regular cleaning or one-off
             deep clean we are ready to assist you.

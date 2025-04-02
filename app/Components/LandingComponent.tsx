@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
 interface LandingComponent {
@@ -8,7 +7,6 @@ interface LandingComponent {
   description: string;
   image: StaticImageData;
   image2: StaticImageData
-  buttonText: string;
 }
 
 const LandingComponent = (props: LandingComponent) => {
@@ -28,11 +26,7 @@ const LandingComponent = (props: LandingComponent) => {
             {props.description}
           </p>
 
-          <Link href="#" className="pt-3">
-            <button className="py-2 lg:py-3 font-Urbanist rounded-3xl px-4 lg:px-6 text-xs lg:text-sm bg-black text-white transition-all duration-1550 transform hover:bg-[#F1598F] hover:scale-105 active:bg-[#F1598F] active:scale-95">
-              {props.buttonText}
-            </button>
-          </Link>
+          <h3 className="text-spickyPink font-semibold">Scrubs&Rugs UK</h3>
         </div>
 
         <div className="hidden lg:w-[55%] lg:mt-[2%] lg:flex justify-center">

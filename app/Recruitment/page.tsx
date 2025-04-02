@@ -1,6 +1,6 @@
 import React from "react";
 import RecruitImage from "../../public/images/RecruitHeroImage.png";
-import RecruitImage3 from "../../public/images/pricingRecruitMobile.png";
+import RecruitImage3 from "../../public/images/recruitMentPhoneImage.png";
 import ArrowPoints2 from "../Components/ArrowPoints2";
 import RecruitImage2 from "../../public/images/recruitImage2.png";
 import Image from "next/image";
@@ -13,7 +13,7 @@ import WhyWork2 from "../../public/images/why2.png";
 const page = () => {
   return (
     <div>
-      <div>
+      <div className="pt-[4%]">
         <RecruitmentHero
           heading="Looking for a flexible job in cleaning?"
           description="If you're seeking part-time or full-time cleaning with us! We are actively 
