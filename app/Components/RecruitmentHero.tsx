@@ -48,7 +48,7 @@ const RecruitmentHero = ({ heading, description, image2, image, buttonName }: Re
 
   return (
     <div className="flex flex-wrap px-[8%] lg:justify-between space-y-[7%] lg:space-y-0 font-Urbanist">
-      <div className="flex flex-col space-y-[3%] lg:space-y-[4%] justify-center lg:w-[50%] relative text-lightBlack">
+      <div className="flex flex-col space-y-[3%] lg:space-y-[4%] justify-center lg:w-[45%] relative text-lightBlack">
         <div className="flex items-center space-x-2">
           <span className="w-3 h-3 bg-[#F1598F] rounded-full"></span>
           <p className="font-semibold">Work With Us</p>
@@ -56,7 +56,7 @@ const RecruitmentHero = ({ heading, description, image2, image, buttonName }: Re
         <h1 className="font-bold text-3xl lg:text-[43px] lg:leading-snug lg:w-[90%]">{heading}</h1>
         <p className="w-[100%] text-darkGray text-[14px] lg:text-[15px]">{description}</p>
         <button
-          className="py-2 lg:py-3 lg:w-[33%] xl:w-[30%] rounded-3xl px-4 lg:px-6 font-semibold text-xs lg:text-sm border bg-black hover:bg-spickyPink text-white hover:scale-105 active:scale-95"
+          className="py-2 lg:py-3 lg:w-[30%] rounded-3xl px-4 lg:px-6 font-semibold text-xs lg:text-sm border bg-black hover:bg-spickyPink text-white hover:scale-105 active:scale-95"
           onClick={() => setIsModalOpen(true)}
         >
           {buttonName}
@@ -70,12 +70,12 @@ const RecruitmentHero = ({ heading, description, image2, image, buttonName }: Re
       <div className=" w-[100%] lg:hidden">
         <Image src={image2} alt="Image" />
       </div>
-{/* 
+
       {isSubmitted && (
         <div className="fixed bottom-5 right-5 bg-spickyPink text-white py-3 px-6 rounded-lg shadow-lg">
           Application Submitted Successfully!
         </div>
-      )} */}
+      )}
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">

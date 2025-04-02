@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { loadStripe } from "@stripe/stripe-js";
 
 
 interface PricingProps {
