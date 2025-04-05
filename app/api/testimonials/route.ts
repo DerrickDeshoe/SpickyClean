@@ -8,7 +8,7 @@ export async function GET() {
     await connectToDatabase();
     const testimonials = await Testimonial.find().sort({ createdAt: -1 });
     return NextResponse.json({ success: true, data: testimonials });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ success: false, message: 'Failed to fetch testimonials' }, { status: 500 });
   }
 }
@@ -26,18 +26,17 @@ export async function POST(req: Request) {
 
     const testimonial = await Testimonial.create({ name, message, rating });
     return NextResponse.json({ success: true, data: testimonial }, { status: 201 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ success: false, message: 'Failed to create testimonial' }, { status: 500 });
   }
 }
 
 // DELETE: Delete a testimonial by ID
-//http://localhost:3000/api/testimonials?id=60b8f7f8f4d55c63b8b8f5e5
-
+// http://localhost:3000/api/testimonials?id=60b8f7f8f4d55c63b8b8f5e5
 export async function DELETE(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
-    const testimonialId = searchParams.get('id');  
+    const testimonialId = searchParams.get('id');
 
     if (!testimonialId) {
       return NextResponse.json({ success: false, message: 'Testimonial ID is required' }, { status: 400 });
@@ -52,7 +51,7 @@ export async function DELETE(req: Request) {
     }
 
     return NextResponse.json({ success: true, message: 'Testimonial deleted successfully' });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ success: false, message: 'Failed to delete testimonial' }, { status: 500 });
   }
 }

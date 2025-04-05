@@ -54,7 +54,10 @@ export default function Testimonials() {
                 {'★'.repeat(testimonial.rating)}
                 {'☆'.repeat(5 - testimonial.rating)}
               </div>
-              <p className="text-gray-700 mb-4">"{testimonial.message}"</p>
+              <p className="text-gray-700 mb-4">
+                {/* Escape quotes around the message */}
+                {testimonial.message.replace(/"/g, '&quot;')}
+              </p>
               <p className="font-semibold text-sm text-right text-gray-600">- {testimonial.name}</p>
             </div>
           ))}
