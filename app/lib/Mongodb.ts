@@ -12,6 +12,7 @@ declare global {
   var mongoose: { conn: Connection | null; promise: Promise<Connection> | null } | undefined;
 }
 
+// Use let or const instead of var
 const cached = global.mongoose || { conn: null, promise: null };
 
 // Create the connection or return the existing one from cache
