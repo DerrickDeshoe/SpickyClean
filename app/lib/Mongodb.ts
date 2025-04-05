@@ -7,12 +7,19 @@ if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable in .env.local');
 }
 
-// Extending globalThis to include mongoose
+// Extending NodeJS.Global to include mongoose
 declare global {
-  let mongoose: { conn: Connection | null; promise: Promise<Connection> | null } | undefined;
+  namespace NodeJS {
+    interface Global {
+      mongoose: { conn: Connection | null; promise: Promise<Connection> | null } | undefined;
+    }
+  }
 }
 
-const cached = global.mongoose || { conn: null, promise: null };
+// Use type assertion to bypass TypeScript type checks
+const globalObject = global as unknown as NodeJS.Global; // Casting globalThis to NodeJS.Global
+
+const cached = globalObject.mongoose || { conn: null, promise: null };
 
 // Create the connection or return the existing one from cache
 export async function connectToDatabase() {
@@ -27,7 +34,7 @@ export async function connectToDatabase() {
   }
 
   cached.conn = await cached.promise;
-  global.mongoose = cached;  // Set the global object for reuse
+  globalObject.mongoose = cached;  // Set the global object for reuse
 
   return cached.conn;
 }
