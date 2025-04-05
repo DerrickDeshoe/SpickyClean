@@ -7,17 +7,15 @@ if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable in .env.local');
 }
 
-// Extending NodeJS.Global to include mongoose
+// Module augmentation to add mongoose to the global object
 declare global {
-  namespace NodeJS {
-    interface Global {
-      mongoose: { conn: Connection | null; promise: Promise<Connection> | null } | undefined;
-    }
+  interface Global {
+    mongoose: { conn: Connection | null; promise: Promise<Connection> | null } | undefined;
   }
 }
 
 // Use type assertion to bypass TypeScript type checks
-const globalObject = global as unknown as NodeJS.Global; // Casting globalThis to NodeJS.Global
+const globalObject = global as unknown as Global; // Casting globalThis to Global
 
 const cached = globalObject.mongoose || { conn: null, promise: null };
 
