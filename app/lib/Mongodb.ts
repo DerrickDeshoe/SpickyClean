@@ -7,12 +7,11 @@ if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable in .env.local');
 }
 
-// Declaring a custom global object type for mongoose
+// Extending globalThis to include mongoose
 declare global {
-  var mongoose: { conn: Connection | null; promise: Promise<Connection> | null } | undefined;
+  let mongoose: { conn: Connection | null; promise: Promise<Connection> | null } | undefined;
 }
 
-// Use let or const instead of var
 const cached = global.mongoose || { conn: null, promise: null };
 
 // Create the connection or return the existing one from cache
