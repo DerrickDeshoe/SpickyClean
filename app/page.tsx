@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import HomeImage from "../public/images/HeroImage.png";
 import HomeImage2 from "../public/images/HeroImageMobile.png";
-import Stats from "./Components/Stats";
 import Ideal from "../app/Components/Ideal";
 import Card1 from "../public/images/icon1.svg";
 import Card2 from "../public/images/icon2.svg";
@@ -17,11 +16,11 @@ import Service5 from "../public/images/service5.png";
 import Service6 from "../public/images/service6.png";
 import WhyUs from "../public/images/WhyUsImage.svg";
 import ArrowPoints from "./Components/ArrowPoints";
-import OurTeam from "./Components/OurTeam";
-import Team1 from "../public/images/Team2.png";
+// import OurTeam from "./Components/OurTeam";
+// import Team1 from "../public/images/Team2.png";
 import Testimonials from "./Components/Testimonials";
-import Testimonial1 from "../public/images/testimonial1.png";
-import Star from '../public/images/Star.svg';
+import TestimonialForm from "./Components/TestimonialForm";
+import Star from "../public/images/Star.svg";
 
 export default function Home() {
   return (
@@ -44,9 +43,9 @@ export default function Home() {
               further! Whether you need an insured regular cleaning or one-off
               deep clean we are ready to assist you.
             </p>
-            <div>
+            {/* <div>
               <Stats />
-            </div>
+            </div> */}
           </div>
 
           <div className="mt-[2%] hidden lg:flex justify-center">
@@ -91,9 +90,9 @@ export default function Home() {
           <Image src={HomeImage} alt="Hero Image" className="" />
         </div>
 
-        <div className=" flex flex-col w-[45%] items-end lg:mt-[9%] space-y-3">
+        {/* <div className=" flex flex-col w-[45%] items-end lg:mt-[9%] space-y-3">
           <Stats />
-        </div>
+        </div> */}
       </div>
 
       <div className="bg-light py-[5%] px-[8%] flex flex-wrap space-y-[7%] lg:space-y-0 lg:justify-between">
@@ -110,7 +109,7 @@ export default function Home() {
         <Ideal
           image={Card3}
           idealItem="Competitive Pricing"
-          reason="Enjoy a sparkling clean space without breaking the bank! At SpicklyClean, we offer premium cleaning services at competitive rates, ensuring you get the best value for top-tier quality."
+          reason="Enjoy a sparkling clean space without breaking the bank! At Scrubs&Rugs, we offer premium cleaning services at competitive rates, ensuring you get the best value for top-tier quality."
         />
       </div>
 
@@ -132,9 +131,9 @@ export default function Home() {
             services that leave your home spotless and refreshed. Whether you
             need regular cleaning service, one-off deep cleaning or specialised
             services, we&apos;re here 2 deliver results you can trust. Let us
-            handle the cleaning so you can focus on what matters most. Experience
-            the difference with Srubs&Rugs -your clean healthy space is just a
-            call away!
+            handle the cleaning so you can focus on what matters most.
+            Experience the difference with Srubs&Rugs -your clean healthy space
+            is just a call away!
           </p>
         </div>
         <Image src={AboutUsImage} alt="About Us Image" />
@@ -266,7 +265,7 @@ export default function Home() {
       </div>
 
       {/*  Our Team*/}
-
+      {/* 
       <div className="px-[8%] py-[5%]  bg-light">
         <div className=" flex flex-col space-y-[1%] justify-end items-center  text-spicklyBlue  ">
           <div className="relative flex space-x-5">
@@ -306,7 +305,7 @@ export default function Home() {
             socialMedia="#"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Testimonial */}
 
@@ -324,26 +323,9 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className="flex flex-wrap space-y-[7%] lg:space-y-0 lg:justify-between">
-          <Testimonials
-            image={Testimonial1}
-            description="Purus ipsum facilisis cursus nunc egestas vel praesent auctor dolor. Et proin dolor rhoncus sit."
-            name="Carol Smith"
-            occupation="Office Manager"
-          />
-          <Testimonials
-            image={Testimonial1}
-            description="Purus ipsum facilisis cursus nunc egestas vel praesent auctor dolor. Et proin dolor rhoncus sit."
-            name="Carol Smith"
-            occupation="Office Manager"
-          />
-          <Testimonials
-            image={Testimonial1}
-            description="Purus ipsum facilisis cursus nunc egestas vel praesent auctor dolor. Et proin dolor rhoncus sit."
-            name="Carol Smith"
-            occupation="Office Manager"
-          />
-        </div>
+        <Testimonials />
+
+        <TestimonialForm />
 
         <div className=" flex flex-col space-y-[1%] justify-end items-center lg:mt-[3%] font-Urbanist">
           <div className="">
@@ -353,7 +335,7 @@ export default function Home() {
           </div>
 
           <div className="flex space-x-4">
-            <Image src={Star} alt='Image'/>
+            <Image src={Star} alt="Image" />
             <p className="text-lightBlack font-bold text-[16px]">4.4/5</p>
           </div>
         </div>

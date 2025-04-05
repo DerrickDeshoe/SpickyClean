@@ -1,32 +1,65 @@
-import { StaticImageData } from "next/image";
-import React from "react";
-import Image from "next/image";
-import Star from '../../public/images/Star.svg'
+'use client';
 
-interface Testimonials {
-  image: StaticImageData;
-  description: string;
+import { useEffect, useState } from 'react';
+
+type Testimonial = {
+  _id: string;
   name: string;
-  occupation: string;
-}
-
-const Testimonials = (props: Testimonials) => {
-  return (
-    <div className="flex flex-col space-y-4 border border-darkGray rounded-lg lg:w-[30%] font-Urbanist">
-      <div className="flex flex-col space-y-2 px-6 pt-5">
-        <Image src={Star} alt="5 Star" />
-        <p className="text-lightBlack">{props.description}</p>
-      </div>
-      <div className="w-full border-t border-darkGray"></div>
-      <div className="flex space-x-2 px-6 py-3">
-        <Image src={props.image} alt="5 Star" />
-        <div className="flex flex-col">
-          <p className="font-semibold">{props.name}</p>
-          <p className="text-darkGray">{props.occupation}</p>
-        </div>
-      </div>
-    </div>
-  );
+  message: string;
+  rating: number;
+  createdAt: string;
 };
 
-export default Testimonials;
+export default function Testimonials() {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);  // Default to empty array
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      const res = await fetch('/api/testimonials');
+      
+      // Check if the response is ok
+      if (res.ok) {
+        const data = await res.json();
+        console.log('Fetched testimonials data:', data); // Log to inspect data
+
+        // Safely access the `data` field
+        if (data?.data) {
+          setTestimonials(data.data);
+        } else {
+          console.error('No testimonials data available');
+        }
+      } else {
+        console.error('Failed to fetch testimonials');
+      }
+      
+      setLoading(false);
+    };
+
+    fetchTestimonials();
+  }, []);
+
+  return (
+    <div className="max-w-4xl mx-auto mt-16 px-4 font-Urbanist">
+
+      {loading ? (
+        <p className="text-center">Loading testimonials...</p>
+      ) : testimonials.length === 0 ? (
+        <p className="text-center text-gray-500">No testimonials yet.</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial._id} className="bg-white shadow-md p-6 rounded-xl border">
+              <div className="text-spickyPink text-xl mb-2">
+                {'★'.repeat(testimonial.rating)}
+                {'☆'.repeat(5 - testimonial.rating)}
+              </div>
+              <p className="text-gray-700 mb-4">"{testimonial.message}"</p>
+              <p className="font-semibold text-sm text-right text-gray-600">- {testimonial.name}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
