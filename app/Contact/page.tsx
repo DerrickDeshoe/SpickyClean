@@ -191,11 +191,11 @@ const Page = () => {
                   alt="image"
                   className="w-[5%] lg:w-[5%]"
                 />
-                <Link href="scrubrugs@scrubrugs.co.uk">
+                <a href="mailto:scrubrugs@scrubsrugs.co.uk">
                   <p className="text-sm lg:text-lg">
-                    scrubrugs@scrubrugs.co.uk
+                    scrubrugs@scrubsrugs.co.uk
                   </p>
-                </Link>
+                </a>
               </div>
               <div className="flex space-x-3">
                 <Image
