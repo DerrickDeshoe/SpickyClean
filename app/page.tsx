@@ -99,7 +99,7 @@ export default function Home() {
         <Ideal
           image={Card1}
           idealItem="Flexible Scheduling"
-          reason="We work around your schedule, not the other way around! Whether it's early mornings, late evenings, or weekends, SpicklyClean ensures your space stays spotless at a time that suits you best."
+          reason="We work around your schedule, not the other way around! Whether it's early mornings, late evenings, or weekends, Scrubs&Rugs ensures your space stays spotless at a time that suits you best."
         />
         <Ideal
           image={Card2}
