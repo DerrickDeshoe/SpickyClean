@@ -80,7 +80,6 @@ const Page = () => {
            Our team is available to assist you with flexible scheduling and personalized solutions."
           image={ContactImage}
           image2={ContactImage2}
-         
         />
       </div>
 
@@ -192,7 +191,11 @@ const Page = () => {
                   alt="image"
                   className="w-[5%] lg:w-[5%]"
                 />
-                <p className="text-sm lg:text-lg">+44</p>
+                <Link href="scrubrugs@scrubrugs.co.uk">
+                  <p className="text-sm lg:text-lg">
+                    scrubrugs@scrubrugs.co.uk
+                  </p>
+                </Link>
               </div>
               <div className="flex space-x-3">
                 <Image
